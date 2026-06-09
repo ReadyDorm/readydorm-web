@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar Sesión | ReadyDorm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/readydorm-icon.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body class="auth-body">
+
+  <main class="auth-layout">
+
+    <!-- ============ COLUMNA IZQUIERDA (visual) ============ -->
+    <section class="auth-visual">
+      <a class="brand auth-brand" href="index.html#inicio" aria-label="Volver a ReadyDorm">
+        <img src="assets/readydorm-icon.png" alt="ReadyDorm" class="brand-icon" />
+        <span class="brand-name">ReadyDorm</span>
+      </a>
+
+      <div class="auth-message">
+        <span class="section-kicker light">Bienvenido de nuevo</span>
+        <h1>Tu plan de emergencia siempre contigo.</h1>
+        <p>Accede a tus contactos, rutas, checklist y clínicas cercanas desde una experiencia segura y rápida.</p>
+      </div>
+
+      <div class="auth-status-card">
+        <div>
+          <small>Estado del hogar</small>
+          <strong>Preparado</strong>
+        </div>
+        <span>98%</span>
+      </div>
+
+      <p class="auth-footer-meta">© 2026 ReadyDorm · Prototipo académico</p>
+    </section>
+
+    <!-- ============ COLUMNA DERECHA (formulario) ============ -->
+    <section class="auth-form-panel">
+      <div class="auth-form-card">
+        <a href="index.html#inicio" class="back-link">← Volver al inicio</a>
+        <h2>Iniciar Sesión</h2>
+        <p>Ingresa tus datos. Al entrar, volverás a la página principal.</p>
+
+        <form class="auth-form" id="loginForm">
+          <label>
+            Correo electrónico
+            <input type="email" placeholder="tu.correo@email.com" required>
+          </label>
+          <label>
+            Contraseña
+            <input type="password" placeholder="••••••••" required>
+          </label>
+          <div class="form-row">
+            <label class="check-label"><input type="checkbox"> Recordarme</label>
+            <a href="#" class="text-link">Olvidé mi contraseña</a>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full btn-large">Entrar</button>
+        </form>
+
+        <p class="auth-switch">¿Aún no tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

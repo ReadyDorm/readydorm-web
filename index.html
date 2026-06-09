@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReadyDorm | SafetyTech residencial</title>
+  <meta name="description" content="ReadyDorm es una plataforma SafetyTech para jóvenes que viven solos, con roommates o en residencias. Prepárate, actúa y organízate ante cualquier emergencia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/readydorm-icon.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+
+  <!-- ============= HEADER ============= -->
+  <header class="site-header" id="top">
+    <nav class="navbar container" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="ReadyDorm Inicio">
+        <img src="assets/readydorm-icon.png" alt="ReadyDorm" class="brand-icon" />
+        <span class="brand-name">ReadyDorm</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="#inicio" class="nav-link active">Inicio</a>
+        <div class="dropdown" id="emergencyDropdown">
+          <button class="dropdown-button" type="button" aria-expanded="false">
+            Emergencias <span class="chevron">⌄</span>
+          </button>
+          <div class="dropdown-menu" aria-label="Tipos de emergencia">
+            <a href="#sismo">Sismo</a>
+            <a href="#incendio">Incendio</a>
+            <a href="#gas">Fuga de gas</a>
+            <a href="#inundacion">Inundación</a>
+            <a href="#corte-luz">Corte de luz</a>
+          </div>
+        </div>
+        <a href="#sos-demo" class="nav-link">SOS</a>
+        <div class="dropdown" id="modulesDropdown">
+          <button class="dropdown-button" type="button" aria-expanded="false">
+            Módulos <span class="chevron">⌄</span>
+          </button>
+          <div class="dropdown-menu" aria-label="Módulos de ReadyDorm">
+            <a href="#nosotros">Nosotros</a>
+            <a href="#perfil">Perfil y contactos</a>
+            <a href="#rutas-evacuacion">Rutas</a>
+            <a href="#coordinacion">Roommates</a>
+            <a href="#mochila-smart">Mochila</a>
+            <a href="#gamificacion">Preparación</a>
+            <a href="#contactos-vista">Contactos</a>
+            <a href="#panel-gestor">Gestores</a>
+            <a href="#clinicas">Clínicas</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost btn-sm">Iniciar Sesión</a>
+        <a href="registro.html" class="btn btn-primary btn-sm">Registrarse</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============= HERO ============= -->
+    <section class="hero" id="inicio">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="pulse-dot"></span> SafetyTech para residencias y dormis</div>
+          <h1>Tu hogar listo <span class="accent">antes, durante</span> y después de una emergencia.</h1>
+          <p class="hero-description">
+            ReadyDorm ayuda a jóvenes que viven solos, con roommates o en residencias a organizar alertas, planes de evacuación, checklist y ayuda médica cercana desde una sola plataforma.
+          </p>
+          <div class="hero-buttons">
+            <a href="registro.html" class="btn btn-primary btn-large">Crear cuenta gratis</a>
+            <a href="#sismo" class="btn btn-soft btn-large">Ver emergencias</a>
+          </div>
+          <div class="trust-row" aria-label="Beneficios principales">
+            <span>✓ Alertas rápidas</span>
+            <span>✓ Mapa simulado</span>
+            <span>✓ Checklist preventivo</span>
+          </div>
+        </div>
+
+        <!-- Mock visual del producto -->
+        <div class="hero-visual reveal delay-1" aria-label="Vista previa de la plataforma">
+          <!-- Tarjetas flotantes -->
+          <div class="float-card fc-1">
+            <span class="dot"></span> Plan de emergencia <strong style="margin-left:4px; color: var(--primary);">activo</strong>
+          </div>
+          <div class="float-card fc-2">
+            <span class="dot"></span> Última revisión <strong style="margin-left:4px; color: var(--primary);">hoy</strong>
+          </div>
+
+          <!-- Card principal de estado -->
+          <div class="app-preview-card">
+            <div class="preview-top">
+              <span class="live-dot"></span>
+              <strong>Estado del hogar</strong>
+              <small>Seguro</small>
+            </div>
+            <div class="preview-alert">
+              <span>!</span>
+              <div>
+                <strong>Plan de emergencia activo</strong>
+                <p>3 contactos · 2 rutas · 5 clínicas cerca</p>
+              </div>
+            </div>
+            <div class="preview-progress"><span></span></div>
+            <div class="preview-grid">
+              <div class="preview-tile">
+                <small>Ruta principal</small>
+                <strong>Salida B</strong>
+                <p>Punto de encuentro: parque frontal</p>
+              </div>
+              <div class="preview-tile">
+                <small>Mochila lista</small>
+                <strong>9 / 12</strong>
+                <p>Faltan 3 elementos esenciales</p>
+              </div>
+            </div>
+            <div class="preview-actions">
+              <button>Activar SOS</button>
+              <button>Iniciar simulacro</button>
+            </div>
+            <div class="preview-chips">
+              <span class="ok">● Sismo · listo</span>
+              <span>Incendio · revisar</span>
+              <span class="warn">● Fuga · pendiente</span>
+              <span>Inundación</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============= SEGMENTOS (HU_05, HU_36) ============= -->
+    <section class="section seg-section" id="segmentos">
+      <div class="container">
+        <div class="section-heading reveal" style="text-align:center;">
+          <span class="section-kicker">¿Para quién?</span>
+          <h2>Una plataforma, tres experiencias de seguridad.</h2>
+          <p>Elige tu perfil al registrarte y accede solo a las funciones diseñadas para tu rol.</p>
+        </div>
+        <div class="seg-tab-bar reveal delay-1" id="segTabBar">
+          <button class="seg-tab active" data-seg="residente">🏠 Residente</button>
+          <button class="seg-tab" data-seg="gestor">🏢 Gestor</button>
+          <button class="seg-tab" data-seg="contacto">📱 Contacto de emergencia</button>
+        </div>
+        <div class="seg-panels">
+
+          <!-- RESIDENTE -->
+          <div class="seg-panel active" id="seg-residente">
+            <div class="seg-features-grid">
+              <div class="seg-feat-card"><span class="sf-icon">🆘</span><h4>Botón SOS</h4><p>Activa una alerta de pánico con 3 segundos de presión continua desde cualquier pantalla.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">🩺</span><h4>Ficha médica</h4><p>Registra tipo de sangre, alergias y condiciones para que los paramédicos actúen rápido.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">🎒</span><h4>Mochila de 72h</h4><p>Checklist inteligente que rastrea qué tienes, qué vence y qué falta en tu kit.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">🗺️</span><h4>Rutas de evacuación</h4><p>Plano de tu piso con rutas marcadas y punto de encuentro con tus roommates.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">🔦</span><h4>Linterna de emergencia</h4><p>Activa el flash LED desde la pantalla SOS para orientarte en la oscuridad.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">🏆</span><h4>Score de preparación</h4><p>Puntaje del 1 al 100 basado en tu mochila y simulacros completados.</p></div>
+            </div>
+          </div>
+
+          <!-- GESTOR -->
+          <div class="seg-panel" id="seg-gestor">
+            <div class="seg-features-grid">
+              <div class="seg-feat-card"><span class="sf-icon">📊</span><h4>Dashboard de estado</h4><p>Visualiza en tiempo real quiénes reportaron estar a salvo y quiénes aún no responden.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">📢</span><h4>Alerta masiva</h4><p>Envía una orden de evacuación a todos los residentes del edificio o por sectores.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">🚒</span><h4>Brigadistas</h4><p>Identifica residentes con capacidad médica o de rescate y asígnales credencial digital.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">🧯</span><h4>Mapa de equipos</h4><p>Registra la ubicación de extintores y mangueras para que los residentes los ubiquen rápido.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">📋</span><h4>Reporte INDECI (PDF)</h4><p>Exporta resultados de simulacros en formato oficial para presentarlo ante autoridades.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">📍</span><h4>Puntos de encuentro</h4><p>Marca zonas seguras municipales en el mapa para que todos evacúen al mismo lugar.</p></div>
+            </div>
+          </div>
+
+          <!-- CONTACTO -->
+          <div class="seg-panel" id="seg-contacto">
+            <div class="seg-features-grid">
+              <div class="seg-feat-card"><span class="sf-icon">🔔</span><h4>Recepción de alerta SOS</h4><p>Recibe notificación de alta prioridad con bypass del modo silencio cuando el residente active el SOS.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">📍</span><h4>Ver ubicación GPS</h4><p>Abre el mapa y ve la ubicación exacta del residente en tiempo real para enviar ayuda.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">📞</span><h4>Llamada rápida</h4><p>Un toque para llamar al residente directamente desde la pantalla de alerta activa.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">🧭</span><h4>Navegación hacia el residente</h4><p>Traza una ruta desde tu ubicación hasta la del residente para acudir lo más rápido posible.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">🩺</span><h4>Ficha médica de emergencia</h4><p>Accede a los datos médicos del residente para informar a los paramédicos si está inconsciente.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">👨‍👩‍👧‍👦</span><h4>Múltiples residentes</h4><p>Monitorea a varios hijos o familiares desde una sola cuenta con perfiles independientes.</p></div>
+            </div>
+          </div>
+
+        </div>
+        <div style="text-align:center;margin-top:2.5rem;" class="reveal">
+          <a href="registro.html" class="btn btn-primary">Elegir mi rol y registrarme</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= FRANJA DE EMERGENCIAS ============= -->
+    <section class="emergency-strip" aria-label="Números de emergencia">
+      <div class="container emergency-strip-grid">
+        <h4 class="es-title">Números de emergencia <span class="hu-tag">HU-11</span></h4>
+        <a class="em-pill em-call" href="tel:116" onclick="callEmergency('Bomberos', '116')" aria-label="Llamar a Bomberos 116"><span>Bomberos</span><strong>116</strong></a>
+        <a class="em-pill em-call" href="tel:105" onclick="callEmergency('Policía', '105')" aria-label="Llamar a Policía 105"><span>Policía</span><strong>105</strong></a>
+        <a class="em-pill em-call" href="tel:106" onclick="callEmergency('SAMU', '106')" aria-label="Llamar a SAMU 106"><span>SAMU</span><strong>106</strong></a>
+        <a class="em-pill em-call" href="tel:115" onclick="callEmergency('Defensa Civil', '115')" aria-label="Llamar a Defensa Civil 115"><span>Defensa Civil</span><strong>115</strong></a>
+      </div>
+    </section>
+
+
+    <!-- ============= SOS INTERACTIVO (HU_06-10, HU_28) ============= -->
+    <section class="section sos-section" id="sos-demo">
+      <div class="container">
+        <div class="sos-split">
+          <div class="sos-copy reveal">
+            <span class="section-kicker">Sistema de alerta SOS</span>
+            <h2>En una crisis, cada segundo importa.</h2>
+            <p>ReadyDorm te da múltiples formas de pedir ayuda sin importar la situación: por botón, por voz, o marcando tu estado en segundos.</p>
+            <ul class="sos-feature-list">
+              <li><span class="sfl-dot coral"></span><strong>HU-06</strong> — Botón SOS con 3 segundos de presión</li>
+              <li><span class="sfl-dot coral"></span><strong>HU-07</strong> — Activación por voz "ReadyDorm activa SOS"</li>
+              <li><span class="sfl-dot support"></span><strong>HU-08</strong> — Reporte "Estoy a salvo" para tranquilizar a la familia</li>
+              <li><span class="sfl-dot coral"></span><strong>HU-09</strong> — Alerta automática si hay incendio en tu piso</li>
+              <li><span class="sfl-dot accent"></span><strong>HU-10</strong> — Linterna de emergencia integrada en el SOS</li>
+              <li><span class="sfl-dot support"></span><strong>HU-28</strong> — Cancelación de falsa alarma con PIN</li>
+            </ul>
+          </div>
+
+          <div class="sos-phone-wrap reveal delay-1">
+            <!-- Alerta de proximidad -->
+            <div class="proximity-alert" id="proximityAlert" style="display:none;">
+              <span>⚠</span> <strong>Alerta piso 3:</strong> Incendio reportado — evacuación inmediata
+            </div>
+
+            <div class="sos-phone">
+              <div class="sp-top">
+                <span class="sp-status-dot"></span>
+                <strong>ReadyDorm</strong>
+                <small id="sosTimeDisplay">14:32</small>
+              </div>
+
+              <div class="sp-screen" id="sosScreen">
+                <!-- estado normal -->
+                <div id="sosStateNormal">
+                  <p class="sp-label">¿Estás en peligro?</p>
+                  <div class="sos-hold-btn" id="sosBtnHold"
+                       aria-label="Mantener presionado para activar SOS">
+                    <span class="shb-ring"></span>
+                    <span class="shb-ring r2"></span>
+                    <div class="shb-core">
+                      <span id="sosBtnLabel">SOS</span>
+                      <small id="sosBtnSub">Mantener 3s</small>
+                    </div>
+                  </div>
+                  <div class="sos-secondary-actions">
+                    <button class="ssa-btn safe-btn" id="safeBtn" onclick="reportSafe()">
+                      ✓ Estoy a salvo
+                    </button>
+                    <button class="ssa-btn voice-btn" id="voiceBtn" onclick="activateVoice()">
+                      🎤 Voz
+                    </button>
+                    <button class="ssa-btn torch-btn" id="torchBtn" onclick="toggleTorch()">
+                      🔦 Linterna
+                    </button>
+                  </div>
+                  <button class="ssa-btn proximity-btn" onclick="showProximityAlert()" style="margin-top:8px;width:100%;text-align:center;">
+                    🔔 Simular alerta de piso
+                  </button>
+                </div>
+
+                <!-- estado: SOS ENVIADO -->
+                <div id="sosStateSent" style="display:none;text-align:center;">
+                  <div class="sp-sent-icon">🆘</div>
+                  <h3 style="color:#FA6A63;margin:12px 0 6px;">SOS Enviado</h3>
+                  <p style="font-size:13px;color:#6D7B8A;">3 contactos notificados<br>Ubicación GPS compartida</p>
+                  <button class="sos-cancel-btn" id="sosCancelBtn" onclick="cancelSOS()">
+                    🚫 Cancelar (falsa alarma)
+                  </button>
+                </div>
+
+                <!-- estado: CANCELADO -->
+                <div id="sosStateCancelled" style="display:none;text-align:center;">
+                  <div class="sp-sent-icon">✅</div>
+                  <h3 style="color:#2EC5B6;margin:12px 0 6px;">Alerta cancelada</h3>
+                  <p style="font-size:13px;color:#6D7B8A;">Tus contactos han sido notificados<br>que fue una falsa alarma.</p>
+                  <button class="btn btn-soft" style="margin-top:16px;font-size:13px;" onclick="resetSOS()">Volver al inicio</button>
+                </div>
+
+                <!-- estado: A SALVO -->
+                <div id="sosStateSafe" style="display:none;text-align:center;">
+                  <div class="sp-sent-icon">💚</div>
+                  <h3 style="color:#2EC5B6;margin:12px 0 6px;">Reporte enviado</h3>
+                  <p style="font-size:13px;color:#6D7B8A;">"Mateo reporta que está bien"<br>— enviado a tu familia</p>
+                  <button class="btn btn-soft" style="margin-top:16px;font-size:13px;" onclick="resetSOS()">Volver al inicio</button>
+                </div>
+
+                <!-- estado: VOZ -->
+                <div id="sosStateVoice" style="display:none;text-align:center;">
+                  <div class="sp-voice-wave">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                  <p style="margin:12px 0 4px;font-weight:600;">Escuchando...</p>
+                  <small style="color:#6D7B8A;">Di: "ReadyDorm activa SOS"</small>
+                  <button class="btn btn-soft" style="margin-top:16px;font-size:13px;" onclick="resetSOS()">Cancelar</button>
+                </div>
+              </div>
+
+              <div class="sp-bottom">
+                <span>GPS activo</span>
+                <span id="torchStatus">Linterna: apagada</span>
+              </div>
+            </div>
+
+            <p class="sos-hint">👆 Mantén presionado el botón rojo 3 segundos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= NOSOTROS ============= -->
+    <section class="section about-section" id="nosotros">
+      <div class="container split-grid">
+        <div class="section-copy reveal">
+          <span class="section-kicker">Nosotros</span>
+          <h2>Una plataforma para que vivir independiente también sea vivir preparado.</h2>
+          <p>
+            ReadyDorm nace porque muchos estudiantes y jóvenes viven solos o con roommates, pero no siempre tienen un plan claro ante sismos, incendios, fugas de gas o cortes de luz.
+          </p>
+          <p>
+            La propuesta combina prevención, organización y respuesta rápida con herramientas fáciles: contactos, rutas, checklist, simulacros y ayuda cercana en una sola experiencia.
+          </p>
+          <div class="about-actions">
+            <a href="#clinicas" class="btn btn-dark">Buscar ayuda cercana</a>
+            <a href="#sismo" class="text-link">Ver protocolos rápidos →</a>
+          </div>
+        </div>
+        <div class="about-cards reveal delay-1">
+          <article class="metric-card">
+            <span>01</span>
+            <div>
+              <h3>Prevención</h3>
+              <p>Checklist, mochila, roles y rutas preparadas antes del riesgo.</p>
+            </div>
+          </article>
+          <article class="metric-card highlighted">
+            <span>02</span>
+            <div>
+              <h3>Respuesta rápida</h3>
+              <p>Indicaciones claras para actuar sin perder tiempo durante una emergencia real.</p>
+            </div>
+          </article>
+          <article class="metric-card">
+            <span>03</span>
+            <div>
+              <h3>Ayuda cercana</h3>
+              <p>Mapa simulado con clínicas, rutas visuales y centros de atención.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============= PERFIL Y CONTACTOS (HU_01-04, HU_33, HU_36) ============= -->
+    <section class="section profile-section soft-blue" id="perfil">
+      <div class="container">
+        <div class="section-heading reveal" style="text-align:center;">
+          <span class="section-kicker">Perfil y seguridad</span>
+          <h2>Tu información médica y contactos, siempre disponibles.</h2>
+          <p>Configura tu ficha médica y vincula a tus contactos de confianza para que todo esté listo cuando más lo necesitas.</p>
+        </div>
+        <div class="profile-grid reveal delay-1">
+
+          <!-- Ficha médica HU_01 -->
+          <div class="profile-card">
+            <div class="pc-header">
+              <span class="pc-icon">🩺</span>
+              <div>
+                <h3>Ficha médica <span class="hu-tag">HU-01</span></h3>
+                <small>Vista por paramédicos en emergencia</small>
+              </div>
+            </div>
+            <div class="medical-form">
+              <div class="mf-row">
+                <label>Tipo de sangre</label>
+                <select id="bloodType" class="mf-input">
+                  <option>O+</option><option>O−</option><option>A+</option>
+                  <option>A−</option><option>B+</option><option>AB+</option>
+                </select>
+              </div>
+              <div class="mf-row">
+                <label>Alergias</label>
+                <input type="text" class="mf-input" id="allergies" placeholder="Penicilina, mariscos..." />
+              </div>
+              <div class="mf-row">
+                <label>Condición preexistente</label>
+                <input type="text" class="mf-input" id="condition" placeholder="Asma, hipertensión..." />
+              </div>
+              <button class="btn btn-primary" style="width:100%;margin-top:4px;" onclick="saveMedical()">Guardar ficha médica</button>
+            </div>
+          </div>
+
+          <!-- Contactos de confianza HU_02 -->
+          <div class="profile-card">
+            <div class="pc-header">
+              <span class="pc-icon">👥</span>
+              <div>
+                <h3>Contactos SOS <span class="hu-tag">HU-02</span></h3>
+                <small>Reciben tu alerta automáticamente</small>
+              </div>
+            </div>
+            <div id="contactList" class="contact-list">
+              <div class="contact-item verified">
+                <div class="ci-avatar">M</div>
+                <div class="ci-info">
+                  <strong>María (Mamá)</strong>
+                  <small>+51 987 654 321 · Vinculada</small>
+                </div>
+                <span class="ci-badge">✓</span>
+              </div>
+              <div class="contact-item verified">
+                <div class="ci-avatar">P</div>
+                <div class="ci-info">
+                  <strong>Pedro (Papá)</strong>
+                  <small>+51 976 543 210 · Vinculado</small>
+                </div>
+                <span class="ci-badge">✓</span>
+              </div>
+            </div>
+            <div class="add-contact-form">
+              <input type="text" class="mf-input" id="newContactName" placeholder="Nombre y parentesco" />
+              <input type="tel" class="mf-input" id="newContactPhone" placeholder="Número (9 dígitos)" maxlength="9" />
+              <button class="btn btn-soft" style="width:100%;" onclick="addContact()">+ Vincular contacto</button>
+            </div>
+          </div>
+
+          <!-- GPS + Biometría HU_03, HU_04 -->
+          <div class="profile-card">
+            <div class="pc-header">
+              <span class="pc-icon">🔒</span>
+              <div>
+                <h3>Privacidad y acceso <span class="hu-tag">HU-03 HU-04</span></h3>
+                <small>Controla GPS y autenticación</small>
+              </div>
+            </div>
+            <div class="toggle-list">
+              <div class="toggle-item">
+                <div>
+                  <strong>GPS solo en emergencias</strong>
+                  <small>Compartir ubicación solo al activar SOS</small>
+                </div>
+                <label class="rd-switch">
+                  <input type="checkbox" id="gpsToggle" checked onchange="toggleGPS(this)">
+                  <span class="rd-slider"></span>
+                </label>
+              </div>
+              <div class="toggle-item">
+                <div>
+                  <strong>Acceso biométrico</strong>
+                  <small>FaceID / Huella para entrar sin clave</small>
+                </div>
+                <label class="rd-switch">
+                  <input type="checkbox" id="bioToggle" onchange="toggleBio(this)">
+                  <span class="rd-slider"></span>
+                </label>
+              </div>
+              <div class="toggle-item">
+                <div>
+                  <strong>Notificaciones críticas</strong>
+                  <small>Bypass del modo silencio en SOS</small>
+                </div>
+                <label class="rd-switch">
+                  <input type="checkbox" id="notifToggle" checked onchange="toggleNotif(this)">
+                  <span class="rd-slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Múltiples residentes HU_36 -->
+          <div class="profile-card">
+            <div class="pc-header">
+              <span class="pc-icon">👨‍👩‍👧</span>
+              <div>
+                <h3>Mis residentes <span class="hu-tag">HU-36</span></h3>
+                <small>Monitoreo familiar centralizado</small>
+              </div>
+            </div>
+            <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Como contacto, puedes supervisar a varios residentes desde tu cuenta y recibir alertas de cada uno por separado.</p>
+            <div class="resident-selector">
+              <div class="rs-card active" onclick="selectResident(this,'Sofía')">
+                <div class="rs-avatar">S</div>
+                <span>Sofía<br><small>Miraflores</small></span>
+                <span class="rs-status ok">●</span>
+              </div>
+              <div class="rs-card" onclick="selectResident(this,'Carlos')">
+                <div class="rs-avatar">C</div>
+                <span>Carlos<br><small>San Miguel</small></span>
+                <span class="rs-status warn">●</span>
+              </div>
+              <div class="rs-card" onclick="selectResident(this,'Lucía')">
+                <div class="rs-avatar">L</div>
+                <span>Lucía<br><small>Surco</small></span>
+                <span class="rs-status ok">●</span>
+              </div>
+            </div>
+            <p id="residentMsg" style="font-size:13px;margin-top:10px;color:var(--muted);">Monitoreando: <strong>Sofía</strong> — Estado: a salvo ✅</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= SISMO ============= -->
+    <section class="section emergency-detail" id="sismo">
+      <div class="container">
+        <div class="detail-title reveal">
+          <span class="danger-label navy-label">Sismo</span>
+          <h2>Qué hacer ante un sismo</h2>
+          <p>Mantén la calma, ubica zonas seguras y evita decisiones apresuradas. Estas son las acciones para los tres momentos clave.</p>
+        </div>
+        <div class="detail-grid three-cols reveal delay-1">
+          <article class="info-card">
+            <span class="info-icon">Antes</span>
+            <h3>Prepárate</h3>
+            <ul>
+              <li>Identifica columnas, muros estructurales y zonas seguras.</li>
+              <li>Ten una mochila de emergencia cerca de la salida.</li>
+              <li>Asegura muebles altos, repisas y objetos pesados.</li>
+              <li>Coordina un punto de encuentro con tus roommates.</li>
+            </ul>
+          </article>
+          <article class="info-card accent-card coral-card">
+            <span class="info-icon">Durante</span>
+            <h3>Protégete</h3>
+            <ul>
+              <li>Aléjate de ventanas, espejos y objetos que puedan caer.</li>
+              <li>No uses ascensores ni corras por las escaleras.</li>
+              <li>Cubre tu cabeza y ubícate en una zona segura.</li>
+              <li>Espera a que termine el movimiento para evacuar.</li>
+            </ul>
+          </article>
+          <article class="info-card">
+            <span class="info-icon">Después</span>
+            <h3>Verifica</h3>
+            <ul>
+              <li>Evacúa con calma hacia el punto de encuentro.</li>
+              <li>Revisa si hay heridos y pide ayuda si es necesario.</li>
+              <li>No regreses hasta confirmar que el lugar es seguro.</li>
+              <li>Comprueba gas, agua y electricidad antes de usarlos.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= INCENDIO ============= -->
+    <section class="section emergency-detail soft-blue" id="incendio">
+      <div class="container">
+        <div class="detail-title reveal">
+          <span class="danger-label coral-label">Incendio</span>
+          <h2>Qué hacer ante un incendio</h2>
+          <p>Actúa rápido, evacúa sin exponerte y evita inhalar humo. Pequeñas decisiones cambian el resultado.</p>
+        </div>
+        <div class="detail-grid three-cols reveal delay-1">
+          <article class="info-card">
+            <span class="info-icon">Prevención</span>
+            <h3>Evita riesgos</h3>
+            <ul>
+              <li>No sobrecargues tomacorrientes o extensiones.</li>
+              <li>Revisa cables dañados y aparatos que se calientan.</li>
+              <li>No dejes velas, planchas o cocina encendidas.</li>
+              <li>Ten un extintor visible y revisado.</li>
+            </ul>
+          </article>
+          <article class="info-card accent-card fire-card">
+            <span class="info-icon">Qué hacer</span>
+            <h3>Evacúa</h3>
+            <ul>
+              <li>Activa la alarma y avisa a las personas cercanas.</li>
+              <li>Si hay humo, desplázate agachado.</li>
+              <li>Toca la puerta antes de abrir; si está caliente, busca otra salida.</li>
+              <li>Llama al 116 cuando estés en un lugar seguro.</li>
+            </ul>
+          </article>
+          <article class="info-card warning-card">
+            <span class="info-icon">No hagas</span>
+            <h3>Evita esto</h3>
+            <ul>
+              <li>No uses ascensores.</li>
+              <li>No vuelvas por objetos personales.</li>
+              <li>No abras ventanas si aumenta el humo o el fuego.</li>
+              <li>No intentes apagar un incendio grande sin apoyo.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= FUGA DE GAS ============= -->
+    <section class="section emergency-detail" id="gas">
+      <div class="container">
+        <div class="detail-title reveal">
+          <span class="danger-label teal-label">Fuga de gas</span>
+          <h2>Qué hacer ante una fuga de gas</h2>
+          <p>Detecta señales, ventila y evita cualquier chispa o dispositivo eléctrico. La ventilación temprana evita explosiones.</p>
+        </div>
+        <div class="detail-grid two-cols reveal delay-1">
+          <article class="info-card wide-card">
+            <span class="info-icon">Detectar</span>
+            <h3>Señales de alerta</h3>
+            <ul>
+              <li>Olor fuerte parecido a azufre o huevo podrido.</li>
+              <li>Silbido cerca de tuberías, balón o cocina.</li>
+              <li>Burbujas al aplicar agua jabonosa en conexiones.</li>
+              <li>Mareos, náuseas o dolor de cabeza sin explicación.</li>
+            </ul>
+          </article>
+          <article class="info-card wide-card accent-card teal-card">
+            <span class="info-icon">Actuar</span>
+            <h3>Acción inmediata</h3>
+            <ul>
+              <li>Evacúa a todos los ocupantes.</li>
+              <li>No enciendas ni apagues interruptores de luz.</li>
+              <li>Abre puertas y ventanas si puedes hacerlo sin riesgo.</li>
+              <li>Cierra la llave del gas y llama desde afuera.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= INUNDACIÓN ============= -->
+    <section class="section emergency-detail soft-yellow" id="inundacion">
+      <div class="container">
+        <div class="detail-title reveal">
+          <span class="danger-label yellow-label">Inundación</span>
+          <h2>Qué hacer ante una inundación</h2>
+          <p>Prioriza zonas altas, electricidad segura y comunicación con tu grupo. El agua sube rápido, anticípate.</p>
+        </div>
+        <div class="detail-grid three-cols reveal delay-1">
+          <article class="info-card">
+            <span class="info-icon">Antes</span>
+            <h3>Reduce daños</h3>
+            <ul>
+              <li>Guarda documentos importantes en bolsa impermeable.</li>
+              <li>Identifica rutas hacia zonas altas o seguras.</li>
+              <li>No dejes cables o extensiones en el piso.</li>
+              <li>Ten linterna y power bank cargados.</li>
+            </ul>
+          </article>
+          <article class="info-card accent-card water-card">
+            <span class="info-icon">Durante</span>
+            <h3>Evita riesgos</h3>
+            <ul>
+              <li>Desconecta la energía si es seguro hacerlo.</li>
+              <li>No camines por zonas con corriente de agua.</li>
+              <li>Sube a una zona elevada y pide ayuda.</li>
+              <li>Mantén comunicación con tus contactos.</li>
+            </ul>
+          </article>
+          <article class="info-card">
+            <span class="info-icon">Después</span>
+            <h3>Revisa con cuidado</h3>
+            <ul>
+              <li>No toques enchufes o cables mojados.</li>
+              <li>Evita consumir agua sin confirmar que sea segura.</li>
+              <li>Limpia con protección si hubo agua contaminada.</li>
+              <li>Reporta daños estructurales o eléctricos.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= CORTE DE LUZ ============= -->
+    <section class="section emergency-detail soft-blue" id="corte-luz">
+      <div class="container">
+        <div class="detail-title reveal">
+          <span class="danger-label yellow-label">Corte de luz</span>
+          <h2>Qué hacer ante un corte de luz</h2>
+          <p>Una preparación básica ayuda a mantener comunicación y seguridad mientras la energía vuelve.</p>
+        </div>
+        <div class="detail-grid three-cols reveal delay-1">
+          <article class="info-card">
+            <span class="info-icon">Kit</span>
+            <h3>Ten listo</h3>
+            <ul>
+              <li>Linterna con pilas o batería cargada.</li>
+              <li>Power bank para celular.</li>
+              <li>Radio portátil si la emergencia es amplia.</li>
+              <li>Lista impresa de contactos importantes.</li>
+            </ul>
+          </article>
+          <article class="info-card accent-card light-card">
+            <span class="info-icon">Durante</span>
+            <h3>Cuida tu vivienda</h3>
+            <ul>
+              <li>Desconecta equipos sensibles para evitar daños.</li>
+              <li>No uses velas cerca de cortinas o papel.</li>
+              <li>Evita abrir constantemente la refrigeradora.</li>
+              <li>Comparte información con tus roommates.</li>
+            </ul>
+          </article>
+          <article class="info-card">
+            <span class="info-icon">Después</span>
+            <h3>Normaliza</h3>
+            <ul>
+              <li>Conecta los equipos poco a poco.</li>
+              <li>Revisa si hubo olor a quemado o cortocircuito.</li>
+              <li>Actualiza tu checklist si faltó algún elemento.</li>
+              <li>Carga nuevamente tus dispositivos de emergencia.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============= RUTAS DE EVACUACIÓN (HU_18) ============= -->
+    <section class="section evacuation-section" id="rutas-evacuacion">
+      <div class="container">
+        <div class="section-heading reveal" style="text-align:center;">
+          <span class="section-kicker">Rutas de evacuación</span>
+          <h2>Salida clara por piso, sin improvisar.</h2>
+          <p>Selecciona un piso y ReadyDorm muestra la ruta recomendada, salida alterna y punto de encuentro exterior.</p>
+        </div>
+
+        <div class="evacuation-layout reveal delay-1">
+          <div class="evacuation-panel">
+            <div class="evac-floor-tabs" id="evacFloorTabs" aria-label="Seleccionar piso">
+              <button class="evac-floor active" type="button" data-floor="1" onclick="selectEvacRoute(1)">Piso 1</button>
+              <button class="evac-floor" type="button" data-floor="2" onclick="selectEvacRoute(2)">Piso 2</button>
+              <button class="evac-floor" type="button" data-floor="3" onclick="selectEvacRoute(3)">Piso 3</button>
+              <button class="evac-floor" type="button" data-floor="4" onclick="selectEvacRoute(4)">Piso 4</button>
+            </div>
+
+            <div class="evac-map" aria-label="Plano simulado de evacuación">
+              <div class="evac-blueprint">
+                <div class="evac-floor-row"><span>Zona norte</span><strong>Dormitorios</strong><small>Evitar ventanas</small></div>
+                <div class="evac-floor-row active"><span id="evacStart">Piso 1</span><strong>Pasillo seguro</strong><small>Ruta verde</small></div>
+                <div class="evac-floor-row"><span>Zona sur</span><strong>Cocina común</strong><small>Cerrar gas si aplica</small></div>
+              </div>
+              <div class="evac-route-flow" aria-label="Flujo de evacuación recomendado">
+                <div class="evac-step current"><span>1</span><strong>Ubícate</strong><small>Aléjate de ventanas</small></div>
+                <div class="evac-flow-line"></div>
+                <div class="evac-step"><span>2</span><strong>Avanza</strong><small>Pasillo central</small></div>
+                <div class="evac-flow-line"></div>
+                <div class="evac-step"><span>3</span><strong>Baja</strong><small>Escalera B</small></div>
+                <div class="evac-flow-line"></div>
+                <div class="evac-step safe"><span>4</span><strong>Punto seguro</strong><small>Parque frontal</small></div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="evac-summary">
+            <span class="hu-tag">HU-18</span>
+            <h3 id="evacTitle">Ruta recomendada: Piso 1</h3>
+            <div class="evac-route-card primary">
+              <small>Ruta principal</small>
+              <strong id="evacPrimary">Escalera B → parque frontal</strong>
+              <p id="evacPrimaryMeta">2 min · pasillo despejado · punto seguro A</p>
+            </div>
+            <div class="evac-route-card">
+              <small>Ruta alterna</small>
+              <strong id="evacAlt">Escalera A → patio lateral</strong>
+              <p id="evacAltMeta">3 min · usar si hay humo en pasillo central</p>
+            </div>
+            <button class="btn btn-primary btn-full" type="button" onclick="startRouteGuidance()">Iniciar guía de salida</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============= COORDINACIÓN ROOMMATES (HU_16, HU_17, HU_19, HU_29, HU_40, HU_41) ============= -->
+    <section class="section coord-section" id="coordinacion">
+      <div class="container">
+        <div class="section-heading reveal" style="text-align:center;">
+          <span class="section-kicker">Coordinación de emergencia</span>
+          <h2>Tu departamento actúa como equipo.</h2>
+          <p>Cada roommate tiene un rol asignado, una tarea clara y un canal de comunicación directo durante la crisis.</p>
+        </div>
+
+        <div class="coord-grid reveal delay-1">
+
+          <!-- Asignación de roles HU_16 -->
+          <div class="coord-card">
+            <h3>🎯 Asignación de roles <span class="hu-tag">HU-16</span></h3>
+            <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">Al activarse una alerta, cada roommate recibe su tarea automáticamente.</p>
+            <div class="role-cards">
+              <div class="role-card gas-role">
+                <span class="rc-icon">🔧</span>
+                <div>
+                  <strong>Mateo</strong>
+                  <small>Cortar llave de gas</small>
+                </div>
+                <button class="rc-confirm" id="taskBtn1" onclick="confirmTask(this,'Mateo','gas')">Confirmar</button>
+              </div>
+              <div class="role-card light-role">
+                <span class="rc-icon">💡</span>
+                <div>
+                  <strong>Valentina</strong>
+                  <small>Cortar electricidad</small>
+                </div>
+                <button class="rc-confirm" id="taskBtn2" onclick="confirmTask(this,'Valentina','luz')">Confirmar</button>
+              </div>
+              <div class="role-card exit-role">
+                <span class="rc-icon">🚪</span>
+                <div>
+                  <strong>Diego</strong>
+                  <small>Guiar evacuación escalera B</small>
+                </div>
+                <button class="rc-confirm" id="taskBtn3" onclick="confirmTask(this,'Diego','evacuación')">Confirmar</button>
+              </div>
+            </div>
+            <div id="taskConfirmMsg" class="task-confirm-msg" style="display:none;"></div>
+          </div>
+
+          <!-- Chat de emergencia HU_19 -->
+          <div class="coord-card">
+            <h3>💬 Chat de emergencia <span class="hu-tag">HU-19</span></h3>
+            <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">Canal directo solo con tus roommates durante la evacuación.</p>
+            <div class="chat-box" id="chatBox">
+              <div class="chat-bubble received"><strong>Mateo:</strong> Ya bajé por escalera B 🟢</div>
+              <div class="chat-bubble received"><strong>Valeria:</strong> Esperando en parque frontal</div>
+            </div>
+            <div class="chat-input-row">
+              <input type="text" id="chatInput" class="mf-input" placeholder="Escribe un mensaje rápido..." />
+              <button class="btn btn-primary btn-sm" onclick="sendChatMsg()">Enviar</button>
+            </div>
+            <div class="quick-msgs">
+              <button onclick="sendQuick('Ya bajé ✅')">Ya bajé ✅</button>
+              <button onclick="sendQuick('Necesito ayuda 🆘')">Necesito ayuda 🆘</button>
+              <button onclick="sendQuick('Estoy en punto de encuentro 📍')">En punto de encuentro 📍</button>
+            </div>
+          </div>
+
+          <!-- Alerta de suministros HU_29 + Gastos HU_40 -->
+          <div class="coord-card">
+            <h3>🛒 Suministros y gastos <span class="hu-tag">HU-29 HU-40</span></h3>
+            <div class="supply-alert-demo" id="supplyAlertDemo">
+              <span class="sa-icon">⚠️</span>
+              <div>
+                <strong>Falta agua embotellada</strong>
+                <small>Tu mochila no tiene este insumo crítico</small>
+              </div>
+              <button class="btn btn-sm btn-primary" onclick="markSupplyDone()">Comprado ✓</button>
+            </div>
+            <div class="expense-form">
+              <p style="font-size:13px;font-weight:600;margin-bottom:8px;">Registrar gasto compartido:</p>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                <input type="text" class="mf-input" id="expConcept" placeholder="Ej: Linterna" style="flex:1;min-width:120px;" />
+                <input type="number" class="mf-input" id="expAmount" placeholder="S/ monto" style="width:90px;" />
+              </div>
+              <button class="btn btn-soft" style="width:100%;margin-top:8px;" onclick="registerExpense()">Registrar gasto</button>
+              <div id="expenseList" class="expense-list"></div>
+            </div>
+          </div>
+
+          <!-- Notificación de intrusos HU_41 -->
+          <div class="coord-card">
+            <h3>🔐 Seguridad del piso <span class="hu-tag">HU-41</span></h3>
+            <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">Recibe alertas si alguien ajeno al edificio accede a tu piso fuera del horario configurado.</p>
+            <div class="intrusion-demo">
+              <div class="id-status" id="intrusionStatus">
+                <span class="id-dot green"></span>
+                <div>
+                  <strong>Piso seguro</strong>
+                  <small>Ningún acceso no autorizado detectado</small>
+                </div>
+              </div>
+              <button class="btn btn-soft btn-sm" style="margin-top:12px;width:100%;" onclick="simulateIntrusion()">
+                Simular alerta de intruso
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= MOCHILA DE EMERGENCIA ============= -->
+    <section class="backpack-section">
+      <div class="container backpack-card reveal">
+        <div class="backpack-copy">
+          <span class="section-kicker light">Mochila de emergencia</span>
+          <h2>Elementos esenciales para cada residente.</h2>
+          <p>Una mochila bien armada cubre las primeras 72 horas. ReadyDorm convierte esta lista en un checklist interactivo y te avisa qué falta revisar.</p>
+          <div class="btn-row">
+            <a href="registro.html" class="btn btn-primary">Revisar mi mochila</a>
+            <a href="#" class="btn btn-glass">Descargar checklist</a>
+          </div>
+        </div>
+        <div class="backpack-grid">
+          <span>Agua embotellada</span>
+          <span>Alimentos no perecibles</span>
+          <span>Linterna</span>
+          <span>Radio portátil</span>
+          <span>Botiquín</span>
+          <span>Documentos</span>
+          <span>Dinero en efectivo</span>
+          <span>Copia de llaves</span>
+          <span>Medicamentos</span>
+          <span>Silbato</span>
+          <span>Manta térmica</span>
+          <span>Cargador portátil</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============= MOCHILA INTELIGENTE (HU_12-15, HU_38, HU_39) ============= -->
+    <section class="section backpack-smart-section" id="mochila-smart">
+      <div class="container">
+        <div class="section-heading reveal" style="text-align:center;">
+          <span class="section-kicker">Mochila inteligente</span>
+          <h2>Sabe qué tienes, qué vence y qué falta.</h2>
+          <p>ReadyDorm convierte tu lista de emergencia en un sistema vivo: checklist interactivo, alertas de caducidad y mochila compartida con tus roommates.</p>
+        </div>
+
+        <div class="bsm-tabs reveal delay-1" id="bsmTabBar">
+          <button class="bsm-tab active" data-bsm="personal">🎒 Mi mochila</button>
+          <button class="bsm-tab" data-bsm="shared">👥 Compartida</button>
+          <button class="bsm-tab" data-bsm="indeci">📋 Guía INDECI</button>
+        </div>
+
+        <div class="bsm-panels reveal delay-1">
+
+          <!-- PERSONAL HU_12, HU_13 -->
+          <div class="bsm-panel active" id="bsm-personal">
+            <div class="backpack-progress-header">
+              <div>
+                <strong>Mi kit de emergencia</strong>
+                <small id="backpackScore">9 / 12 elementos listos</small>
+              </div>
+              <div class="bp-bar-wrap">
+                <div class="bp-bar" id="bpBar" style="width:75%"></div>
+              </div>
+            </div>
+            <div class="backpack-checklist" id="backpackChecklist">
+              <label class="bck-item checked"><input type="checkbox" checked onchange="updateBackpack()"> <span>💧 Agua embotellada 2L</span> <small class="exp-ok">Vence: ago 2027</small></label>
+              <label class="bck-item checked"><input type="checkbox" checked onchange="updateBackpack()"> <span>🥫 Alimentos no perecibles</span> <small class="exp-warn">⚠ Vence: jul 2025</small></label>
+              <label class="bck-item checked"><input type="checkbox" checked onchange="updateBackpack()"> <span>🔦 Linterna con pilas</span> <small class="exp-ok">OK</small></label>
+              <label class="bck-item checked"><input type="checkbox" checked onchange="updateBackpack()"> <span>📻 Radio portátil</span> <small class="exp-ok">OK</small></label>
+              <label class="bck-item checked"><input type="checkbox" checked onchange="updateBackpack()"> <span>🩹 Botiquín básico</span> <small class="exp-warn">⚠ Vence: mar 2025</small></label>
+              <label class="bck-item checked"><input type="checkbox" checked onchange="updateBackpack()"> <span>📄 Documentos (copia)</span> <small class="exp-ok">OK</small></label>
+              <label class="bck-item checked"><input type="checkbox" checked onchange="updateBackpack()"> <span>💵 Dinero en efectivo</span> <small class="exp-ok">OK</small></label>
+              <label class="bck-item checked"><input type="checkbox" checked onchange="updateBackpack()"> <span>💊 Medicamentos personales</span> <small class="exp-ok">OK</small></label>
+              <label class="bck-item checked"><input type="checkbox" checked onchange="updateBackpack()"> <span>📱 Cargador portátil</span> <small class="exp-ok">OK</small></label>
+              <label class="bck-item"><input type="checkbox" onchange="updateBackpack()"> <span>🔑 Copia de llaves</span> <small class="exp-ok">Pendiente</small></label>
+              <label class="bck-item"><input type="checkbox" onchange="updateBackpack()"> <span>🌡️ Manta térmica</span> <small class="exp-ok">Pendiente</small></label>
+              <label class="bck-item"><input type="checkbox" onchange="updateBackpack()"> <span>🔔 Silbato de emergencia</span> <small class="exp-ok">Pendiente</small></label>
+            </div>
+            <div class="bck-expiry-alert" id="bckExpiryAlert">
+              ⚠️ <strong>2 items por vencer</strong> — Alimentos y botiquín vencen pronto. <a href="#" onclick="event.preventDefault();showToast('Notificación enviada a tus contactos.')">Notificar a contactos</a>
+            </div>
+          </div>
+
+          <!-- COMPARTIDA HU_14 -->
+          <div class="bsm-panel" id="bsm-shared">
+            <p style="font-size:14px;color:var(--muted);margin-bottom:16px;">Cada roommate puede marcar items desde su propio dispositivo. Todos ven quién aportó qué.</p>
+            <div class="shared-backpack-grid">
+              <div class="sbg-row"><span>💧 Agua 5L</span><span class="sbg-owner mateo">Mateo ✓</span></div>
+              <div class="sbg-row"><span>🔦 Linterna LED</span><span class="sbg-owner valeria">Valeria ✓</span></div>
+              <div class="sbg-row"><span>🩹 Botiquín</span><span class="sbg-owner pending">— Pendiente</span></div>
+              <div class="sbg-row"><span>📻 Radio portátil</span><span class="sbg-owner diego">Diego ✓</span></div>
+              <div class="sbg-row"><span>🕯️ Velas + fósforos</span><span class="sbg-owner pending">— Pendiente</span></div>
+              <div class="sbg-row"><span>🧯 Extintor 1kg</span><span class="sbg-owner mateo">Mateo ✓</span></div>
+            </div>
+            <button class="btn btn-soft" style="margin-top:16px;width:100%;" onclick="showToast('Item marcado como tuyo en la mochila compartida ✓')">Marcar un item como mío</button>
+          </div>
+
+          <!-- INDECI HU_15 -->
+          <div class="bsm-panel" id="bsm-indeci">
+            <p style="font-size:14px;color:var(--muted);margin-bottom:16px;">Lista oficial de INDECI (Defensa Civil). Los items marcados con 🔴 son obligatorios y aún no están en tu mochila.</p>
+            <div class="indeci-list">
+              <div class="indeci-item mandatory have"><span>🟢</span> Agua (mínimo 2L por persona)</div>
+              <div class="indeci-item mandatory missing"><span>🔴</span> <strong>Botiquín completo</strong> — ¡No registrado!</div>
+              <div class="indeci-item mandatory have"><span>🟢</span> Linterna y pilas extra</div>
+              <div class="indeci-item mandatory missing"><span>🔴</span> <strong>Manta térmica</strong> — ¡No registrada!</div>
+              <div class="indeci-item mandatory have"><span>🟢</span> Documentos en bolsa hermética</div>
+              <div class="indeci-item optional"><span>🟡</span> Radio portátil (recomendado)</div>
+              <div class="indeci-item optional"><span>🟡</span> Silbato de emergencia</div>
+              <div class="indeci-item mandatory missing"><span>🔴</span> <strong>Copia de llaves</strong> — ¡No registrada!</div>
+            </div>
+            <p style="font-size:12px;color:var(--muted);margin-top:12px;">Fuente: INDECI — Defensa Civil del Perú. Norma técnica de preparación ante sismos.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============= GAMIFICACIÓN Y EDUCACIÓN (HU_26, HU_27, HU_25, HU_43, HU_49, HU_50) ============= -->
+    <section class="section gamif-section soft-yellow" id="gamificacion">
+      <div class="container">
+        <div class="section-heading reveal" style="text-align:center;">
+          <span class="section-kicker">Aprende y prepárate</span>
+          <h2>La preparación también puede ser un juego.</h2>
+          <p>Quizzes, simulacros y un score de preparación que te motiva a mantener tu kit siempre al día.</p>
+        </div>
+
+        <div class="gamif-grid">
+
+          <!-- Quiz de seguridad HU_27 -->
+          <div class="gamif-card reveal" id="quizCard">
+            <h3>🧠 Quiz de seguridad <span class="hu-tag">HU-27</span></h3>
+            <p id="quizProgress" style="font-size:13px;color:var(--muted);margin-bottom:14px;">Pregunta 1 de 5</p>
+
+            <div id="quizArea">
+              <p class="quiz-question" id="quizQuestion">¿Qué hacer durante un sismo?</p>
+              <div class="quiz-options" id="quizOptions">
+                <button class="qo-btn" onclick="answerQuiz(false)">Correr hacia la calle</button>
+                <button class="qo-btn" onclick="answerQuiz(true)">Ubicarse bajo una mesa resistente</button>
+                <button class="qo-btn" onclick="answerQuiz(false)">Usar el ascensor</button>
+                <button class="qo-btn" onclick="answerQuiz(false)">Abrir todas las ventanas</button>
+              </div>
+            </div>
+
+            <div id="quizResult" style="display:none;text-align:center;">
+              <div style="font-size:48px;margin:16px 0;">🏆</div>
+              <h3 id="quizFinalScore" style="color:var(--primary);">¡Puntaje: 4/5!</h3>
+              <p style="color:var(--muted);font-size:14px;">Excelente preparación. Ganaste la medalla de Experto en Sismos.</p>
+              <div class="badge-earned">🥇 Experto en Sismos</div>
+              <button class="btn btn-primary" style="margin-top:16px;" onclick="resetQuiz()">Intentar de nuevo</button>
+            </div>
+          </div>
+
+          <!-- Score de preparación HU_26 + Medallas HU_43 -->
+          <div class="gamif-card reveal delay-1">
+            <h3>📊 Score de preparación <span class="hu-tag">HU-26</span></h3>
+            <div class="score-display">
+              <div class="score-circle" id="scoreCircle">
+                <strong id="scoreValue">75</strong>
+                <small>/100</small>
+              </div>
+              <div class="score-info">
+                <p class="score-label" id="scoreLabel">🟦 Usuario preparado</p>
+                <div class="score-breakdown">
+                  <div><span>Mochila completa</span><div class="mini-bar"><div style="width:75%"></div></div></div>
+                  <div><span>Simulacros</span><div class="mini-bar"><div style="width:60%"></div></div></div>
+                  <div><span>Contactos vinculados</span><div class="mini-bar"><div style="width:100%"></div></div></div>
+                </div>
+              </div>
+            </div>
+
+            <h4 style="margin:20px 0 12px;">🏅 Mis medallas <span class="hu-tag">HU-43</span></h4>
+            <div class="badge-grid" id="badgeGrid">
+              <div class="badge-item earned" title="Mochila completa">🎒<small>Mochila lista</small></div>
+              <div class="badge-item earned" title="Quiz completado">🧠<small>Quiz experto</small></div>
+              <div class="badge-item earned" title="Contactos vinculados">👥<small>Red activa</small></div>
+              <div class="badge-item locked" title="Completa 5 simulacros">🔒<small>5 simulacros</small></div>
+              <div class="badge-item locked" title="Mochila perfecta">🔒<small>Kit perfecto</small></div>
+              <div class="badge-item locked" title="30 días preparado">🔒<small>30 días</small></div>
+            </div>
+          </div>
+
+          <!-- Avisos HU_25 + Tutorial HU_49 + Videos HU_50 -->
+          <div class="gamif-card reveal delay-1" style="grid-column: 1/-1;">
+            <div class="edu-grid">
+              <div class="edu-item">
+                <span class="edu-icon">🚨</span>
+                <div>
+                  <h4>Avisos de simulacros nacionales <span class="hu-tag">HU-25</span></h4>
+                  <p>Recibe recordatorios de simulacros oficiales y practica el flujo completo: SOS, roles y punto de encuentro.</p>
+                  <div class="drill-reminder">
+                    <strong>Próximo aviso</strong>
+                    <span>Simulacro nacional · 31 mayo · 10:00 a. m.</span>
+                  </div>
+                  <div class="edu-actions">
+                    <button class="btn btn-primary" onclick="subscribeNationalDrill()">Activar aviso</button>
+                    <button class="btn btn-soft" onclick="startDrill()">Practicar ahora</button>
+                  </div>
+                </div>
+              </div>
+              <div class="edu-item">
+                <span class="edu-icon">📖</span>
+                <div>
+                  <h4>Tutorial rápido <span class="hu-tag">HU-49</span></h4>
+                  <p>Guía de 3 minutos para usar ReadyDorm en una crisis real. Sin tiempo para leer manuales cuando todo pasa.</p>
+                  <button class="btn btn-soft" onclick="showTutorial()">Ver tutorial</button>
+                </div>
+              </div>
+              <div class="edu-item">
+                <span class="edu-icon">🎬</span>
+                <div>
+                  <h4>Videos de primeros auxilios <span class="hu-tag">HU-50</span></h4>
+                  <p>Biblioteca breve con guías para RCP, quemaduras, asfixia y fracturas, pensada para consulta rápida.</p>
+                  <div class="first-aid-library" id="firstAidLibrary">
+                    <button type="button" class="first-aid-chip active" data-guide="rcp" onclick="showFirstAidGuide('rcp')">RCP</button>
+                    <button type="button" class="first-aid-chip" data-guide="quemaduras" onclick="showFirstAidGuide('quemaduras')">Quemaduras</button>
+                    <button type="button" class="first-aid-chip" data-guide="asfixia" onclick="showFirstAidGuide('asfixia')">Asfixia</button>
+                    <button type="button" class="first-aid-chip" data-guide="fracturas" onclick="showFirstAidGuide('fracturas')">Fracturas</button>
+                  </div>
+                  <div class="first-aid-preview" id="firstAidPreview">
+                    <strong>RCP básica</strong>
+                    <span>30 compresiones, 2 ventilaciones y llamada inmediata al 106.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Modal simulacro -->
+        <div class="drill-modal" id="drillModal" style="display:none;">
+          <div class="dm-card">
+            <h3>🚨 Simulacro en progreso</h3>
+            <div class="dm-timer" id="drillTimer">00:00</div>
+            <p id="drillStep">Paso 1: Activa el botón SOS en tu teléfono</p>
+            <div class="dm-steps">
+              <span class="dm-step active" id="ds1">1</span>
+              <span class="dm-step" id="ds2">2</span>
+              <span class="dm-step" id="ds3">3</span>
+              <span class="dm-step" id="ds4">4</span>
+            </div>
+            <button class="btn btn-primary" style="width:100%;" onclick="advanceDrill()">Siguiente paso →</button>
+            <button class="btn btn-ghost" style="width:100%;margin-top:8px;" onclick="endDrill()">Cancelar simulacro</button>
+          </div>
+        </div>
+
+        <!-- Modal tutorial -->
+        <div class="drill-modal" id="tutorialModal" style="display:none;">
+          <div class="dm-card">
+            <h3>📖 Tutorial ReadyDorm</h3>
+            <div class="tutorial-steps">
+              <div class="ts-item"><span class="ts-num">1</span><div><strong>Configura tu perfil</strong><p>Ficha médica, contactos de confianza y selección de rol (Residente o Gestor).</p></div></div>
+              <div class="ts-item"><span class="ts-num">2</span><div><strong>Activa el SOS</strong><p>Mantén presionado el botón rojo 3 segundos. Tus contactos recibirán tu ubicación al instante.</p></div></div>
+              <div class="ts-item"><span class="ts-num">3</span><div><strong>Coordina con roommates</strong><p>Cada uno tiene su rol: gas, luz o evacuación. Confirman desde su app cuando completan la tarea.</p></div></div>
+              <div class="ts-item"><span class="ts-num">4</span><div><strong>Reporta tu estado</strong><p>Presiona "Estoy a salvo" para que tu familia sepa que estás bien sin necesidad de llamar.</p></div></div>
+            </div>
+            <button class="btn btn-primary" style="width:100%;margin-top:16px;" onclick="closeTutorial()">¡Entendido, estoy listo!</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============= VISTA DEL CONTACTO/FAMILIA (HU_30-37) ============= -->
+    <section class="section family-section" id="contactos-vista">
+      <div class="container">
+        <div class="fam-split">
+          <div class="fam-copy reveal">
+            <span class="section-kicker">Para contactos de emergencia</span>
+            <h2>Saber que tu familiar está bien, en segundos.</h2>
+            <p>ReadyDorm le da a tus contactos de confianza todas las herramientas para actuar con rapidez y sin pánico cuando reciben una alerta.</p>
+            <ul class="sos-feature-list">
+              <li><span class="sfl-dot coral"></span><strong>HU-30</strong> — Alerta de alta prioridad con bypass del silencio</li>
+              <li><span class="sfl-dot coral"></span><strong>HU-31</strong> — Mapa GPS con ubicación exacta del residente</li>
+              <li><span class="sfl-dot support"></span><strong>HU-32</strong> — Confirmación de lectura enviada al residente</li>
+              <li><span class="sfl-dot coral"></span><strong>HU-33</strong> — Acceso a la ficha médica para paramédicos</li>
+              <li><span class="sfl-dot accent"></span><strong>HU-34</strong> — Botón de llamada rápida con número marcado</li>
+              <li><span class="sfl-dot support"></span><strong>HU-35</strong> — Ruta de navegación desde tu ubicación</li>
+              <li><span class="sfl-dot accent"></span><strong>HU-37</strong> — Historial completo de alertas pasadas</li>
+            </ul>
+          </div>
+
+          <div class="fam-phone-wrap reveal delay-1">
+            <div class="fam-phone">
+              <div class="sp-top">
+                <span class="sp-status-dot coral"></span>
+                <strong>Alerta de Sofía</strong>
+                <small>Ahora</small>
+              </div>
+              <div class="fam-screen" id="famScreen">
+
+                <!-- Estado alerta activa -->
+                <div id="famStateAlert">
+                  <div class="fam-alert-card" id="famAlertCard">
+                    <div class="fac-header">
+                      <span class="fac-avatar">S</span>
+                      <div>
+                        <strong>Sofía activó SOS</strong>
+                        <small>Hace 23 segundos · Miraflores</small>
+                      </div>
+                    </div>
+                    <div class="fac-location">
+                      <div class="fac-mini-map">
+                        <div class="fmm-pin">📍</div>
+                        <span>Av. Larco 432, Miraflores</span>
+                      </div>
+                    </div>
+                    <div class="fam-action-btns">
+                      <button class="fab-btn coral" onclick="famConfirm()">✓ Confirmar lectura</button>
+                      <button class="fab-btn blue" onclick="famCall()">📞 Llamar a Sofía</button>
+                      <button class="fab-btn teal" onclick="famRoute()">🗺️ Cómo llegar</button>
+                      <button class="fab-btn yellow" onclick="famMedical()">🩺 Ficha médica</button>
+                    </div>
+                    <div id="famFeedback" class="fam-feedback" style="display:none;"></div>
+                  </div>
+                </div>
+
+                <!-- Historial HU_37 -->
+                <div id="famStateHistory" style="display:none;">
+                  <p style="font-size:12px;font-weight:600;margin-bottom:10px;">Historial de alertas — Sofía</p>
+                  <div class="alert-history-list">
+                    <div class="ahl-item safe"><span>✅</span><div><strong>Simulacro</strong><small>15 may 2026 · Resuelta en 2 min</small></div></div>
+                    <div class="ahl-item sos"><span>🆘</span><div><strong>SOS real — sismo leve</strong><small>28 abr 2026 · Resuelto en 4 min</small></div></div>
+                    <div class="ahl-item safe"><span>✅</span><div><strong>Simulacro nacional</strong><small>31 mar 2026 · Resuelta en 3 min</small></div></div>
+                  </div>
+                  <button class="btn btn-soft" style="width:100%;margin-top:12px;" onclick="showFamAlert()">← Volver a alerta activa</button>
+                </div>
+
+              </div>
+              <div class="sp-bottom" style="gap:8px;">
+                <button class="fam-tab-btn active" onclick="showFamAlert()">Alerta</button>
+                <button class="fam-tab-btn" onclick="showFamHistory()">Historial</button>
+              </div>
+            </div>
+            <p class="sos-hint">👆 Interactúa con los botones de la alerta</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============= DASHBOARD DEL GESTOR (HU_20-23, HU_42, HU_44-48) ============= -->
+    <section class="section gestor-section" id="panel-gestor">
+      <div class="container">
+        <div class="section-heading reveal" style="text-align:center;">
+          <span class="section-kicker">Panel del gestor</span>
+          <h2>Control total del edificio en una sola pantalla.</h2>
+          <p>El Safety Lead tiene acceso a herramientas avanzadas: alertas masivas, brigadistas, mapa de equipos y reportes INDECI.</p>
+        </div>
+
+        <div class="gestor-tabs reveal delay-1" id="gestorTabBar">
+          <button class="gestor-tab active" data-gtab="estado">📊 Estado</button>
+          <button class="gestor-tab" data-gtab="alertas">📢 Alertas</button>
+          <button class="gestor-tab" data-gtab="equipo">🚒 Equipo</button>
+          <button class="gestor-tab" data-gtab="historial">📋 Historial</button>
+          <button class="gestor-tab" data-gtab="reportes">🔧 Reportes</button>
+        </div>
+
+        <div class="gestor-panels reveal delay-1">
+
+          <!-- ESTADO HU_20 -->
+          <div class="gestor-panel active" id="gtab-estado">
+            <h3 style="margin-bottom:16px;">Residentes del edificio — Estado en tiempo real <span class="hu-tag">HU-20</span></h3>
+            <div class="resident-grid" id="residentGrid">
+              <!-- generado por JS -->
+            </div>
+            <div class="resident-legend">
+              <span><span class="rl-dot safe"></span> A salvo</span>
+              <span><span class="rl-dot danger"></span> Sin respuesta</span>
+              <span><span class="rl-dot unknown"></span> Sin reportar</span>
+            </div>
+            <div style="display:flex;gap:12px;margin-top:16px;flex-wrap:wrap;">
+              <button class="btn btn-primary" onclick="markAllSafe()">✓ Marcar todos a salvo</button>
+              <button class="btn btn-soft" onclick="resetResidents()">↺ Reiniciar estado</button>
+            </div>
+          </div>
+
+          <!-- ALERTAS HU_22, HU_47, HU_48 -->
+          <div class="gestor-panel" id="gtab-alertas">
+            <div class="alerts-split">
+              <div>
+                <h3>Notificación masiva <span class="hu-tag">HU-22</span></h3>
+                <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Envía una instrucción a todo el edificio o a un sector específico.</p>
+                <div class="mass-alert-form">
+                  <textarea class="mf-input" id="massMsg" rows="3" placeholder="Ej: Evacuar por fachada trasera — incendio en sótano"></textarea>
+                  <select class="mf-input" id="sectorSelect" style="margin-top:8px;">
+                    <option value="all">Todo el edificio</option>
+                    <option value="a">Torre A</option>
+                    <option value="b">Torre B</option>
+                    <option value="3">Solo piso 3</option>
+                    <option value="4">Solo piso 4</option>
+                  </select>
+                  <button class="btn btn-primary" style="width:100%;margin-top:8px;" onclick="sendMassAlert()">🚨 Emitir alerta</button>
+                </div>
+              </div>
+              <div>
+                <h3>Punto de encuentro <span class="hu-tag">HU-47</span></h3>
+                <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Marca la zona segura municipal para que todos evacúen al mismo lugar.</p>
+                <div class="meeting-point-map">
+                  <div class="mpm-area">
+                    <div class="mpm-building">🏢</div>
+                    <div class="mpm-pin" id="mpmPin" onclick="moveMeetingPoint()">📍<small>Punto actual</small></div>
+                  </div>
+                  <button class="btn btn-soft" style="width:100%;margin-top:8px;" onclick="moveMeetingPoint()">Cambiar punto de encuentro</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EQUIPO HU_44, HU_45 -->
+          <div class="gestor-panel" id="gtab-equipo">
+            <div class="alerts-split">
+              <div>
+                <h3>Brigadistas <span class="hu-tag">HU-44</span></h3>
+                <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Asigna credenciales a residentes con capacidad médica o de rescate.</p>
+                <div class="brigadier-list" id="brigadierList">
+                  <div class="brig-item active"><div class="brig-avatar">M</div><div><strong>Martina Torres</strong><small>Piso 2 · Enfermera ✓</small></div><span class="brig-badge">🚑 Médica</span></div>
+                  <div class="brig-item active"><div class="brig-avatar">R</div><div><strong>Roberto Cerna</strong><small>Piso 4 · Bombero ret. ✓</small></div><span class="brig-badge">🔥 Rescate</span></div>
+                  <div class="brig-item pending"><div class="brig-avatar">A</div><div><strong>Andrea Pinto</strong><small>Piso 1 · Sin asignar</small></div><button class="btn btn-sm btn-soft" onclick="assignBrigadier(this,'Andrea')">+ Asignar</button></div>
+                  <div class="brig-item pending"><div class="brig-avatar">J</div><div><strong>Jorge Solis</strong><small>Piso 3 · Sin asignar</small></div><button class="btn btn-sm btn-soft" onclick="assignBrigadier(this,'Jorge')">+ Asignar</button></div>
+                </div>
+              </div>
+              <div>
+                <h3>Equipos de seguridad <span class="hu-tag">HU-45</span></h3>
+                <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Registra la ubicación de extintores y mangueras en el plano del edificio.</p>
+                <div class="equipment-map">
+                  <div class="em-floor">
+                    <span class="em-label">Piso 1</span>
+                    <div class="em-items">
+                      <div class="em-item" title="Extintor PQS">🧯<small>PQS</small></div>
+                      <div class="em-item" title="Manguera">🚿<small>Manguera</small></div>
+                    </div>
+                  </div>
+                  <div class="em-floor">
+                    <span class="em-label">Piso 2</span>
+                    <div class="em-items">
+                      <div class="em-item" title="Extintor CO2">🧯<small>CO₂</small></div>
+                    </div>
+                  </div>
+                  <div class="em-floor">
+                    <span class="em-label">Piso 3</span>
+                    <div class="em-items">
+                      <div class="em-item" title="Extintor PQS">🧯<small>PQS</small></div>
+                      <div class="em-item" title="Manguera">🚿<small>Manguera</small></div>
+                      <div class="em-item add-item" onclick="addEquipment(this)">+<small>Agregar</small></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- HISTORIAL HU_23, HU_46 -->
+          <div class="gestor-panel" id="gtab-historial">
+            <div class="alerts-split">
+              <div>
+                <h3>Historial de simulacros <span class="hu-tag">HU-23</span></h3>
+                <div class="drill-chart">
+                  <div class="dc-bar-wrap" title="31 mar — 4:32 min"><div class="dc-bar" style="height:60%"></div><small>31 mar</small></div>
+                  <div class="dc-bar-wrap" title="15 abr — 3:18 min"><div class="dc-bar" style="height:80%"></div><small>15 abr</small></div>
+                  <div class="dc-bar-wrap" title="28 abr — 2:45 min"><div class="dc-bar" style="height:90%"></div><small>28 abr</small></div>
+                  <div class="dc-bar-wrap" title="15 may — 2:10 min"><div class="dc-bar" style="height:100%"></div><small>15 may</small></div>
+                </div>
+                <p style="font-size:12px;color:var(--muted);margin-top:8px;">Tiempo promedio de respuesta mejorando: 4:32 → 2:10 min</p>
+              </div>
+              <div>
+                <h3>Exportar reporte INDECI <span class="hu-tag">HU-46</span></h3>
+                <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Genera el PDF oficial con tiempos de respuesta y porcentaje de participación para presentar ante autoridades.</p>
+                <div class="pdf-preview">
+                  <div class="pdp-icon">📄</div>
+                  <div>
+                    <strong>Simulacro — Mayo 2026</strong>
+                    <small>18 residentes · Tiempo: 2:10 min · 94% participación</small>
+                  </div>
+                </div>
+                <button class="btn btn-primary" style="width:100%;margin-top:12px;" onclick="exportPDF()">📥 Descargar PDF INDECI</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- REPORTES HU_21, HU_42 -->
+          <div class="gestor-panel" id="gtab-reportes">
+            <div class="alerts-split">
+              <div>
+                <h3>Reporte de daños estructurales <span class="hu-tag">HU-21</span></h3>
+                <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Sube fotos de grietas u otros daños para que un ingeniero las evalúe post-sismo.</p>
+                <div class="damage-form">
+                  <select class="mf-input" id="damageFloor">
+                    <option>Piso 1</option><option>Piso 2</option><option>Piso 3</option>
+                  </select>
+                  <textarea class="mf-input" rows="2" id="damageDesc" placeholder="Describe el daño: grieta en columna, fisura en losa..." style="margin-top:8px;"></textarea>
+                  <div class="photo-upload-btn" onclick="simulatePhotoUpload()">📷 Adjuntar foto del daño</div>
+                  <p id="photoMsg" style="font-size:12px;color:var(--muted);min-height:18px;margin-top:4px;"></p>
+                  <button class="btn btn-primary" style="width:100%;margin-top:8px;" onclick="submitDamageReport()">Enviar reporte al ingeniero</button>
+                </div>
+              </div>
+              <div>
+                <h3>Reporte de averías críticas <span class="hu-tag">HU-42</span></h3>
+                <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Los residentes reportan fallas eléctricas o fugas antes de que escalen a emergencia mayor.</p>
+                <div class="fault-queue" id="faultQueue">
+                  <div class="fq-item high"><span class="fq-dot"></span><div><strong>Falla eléctrica expuesta — Piso 2</strong><small>Hace 5 min · Reportado por: Res. 204</small></div><button class="btn btn-sm btn-primary" onclick="dismissFault(this)">Atender</button></div>
+                  <div class="fq-item medium"><span class="fq-dot med"></span><div><strong>Fuga de agua — Baño Piso 1</strong><small>Hace 22 min · Reportado por: Res. 101</small></div><button class="btn btn-sm btn-soft" onclick="dismissFault(this)">Atender</button></div>
+                </div>
+                <button class="btn btn-soft" style="width:100%;margin-top:12px;" onclick="addFault()">+ Simular nueva avería</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= CLÍNICAS CERCANAS ============= -->
+    <section class="section clinics-section" id="clinicas">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Clínicas cercanas</span>
+          <h2>Mapa interactivo de ayuda médica cercana.</h2>
+          <p>
+            Esta sección no usa Google Maps ni APIs pagadas. El mapa está emulado para el prototipo, pero permite seleccionar clínicas, filtrar opciones y visualizar rutas simuladas desde la ubicación del usuario.
+          </p>
+        </div>
+
+        <div class="map-layout reveal delay-1">
+
+          <!-- Panel del mapa -->
+          <div class="map-panel">
+            <div class="map-toolbar">
+              <div>
+                <strong>Mapa interactivo ReadyDorm</strong>
+                <span id="locationStatus">Ubicación referencial: Lima, Perú</span>
+              </div>
+              <div class="map-toolbar-actions">
+                <button id="detectLocation" class="btn btn-primary btn-sm">Simular mi ubicación</button>
+                <button id="recenterMap" class="btn btn-soft btn-sm" type="button">Centrar mapa</button>
+              </div>
+            </div>
+
+            <div id="mockMap" class="mock-map" aria-label="Mapa interactivo simulado de clínicas cercanas">
+              <div class="map-scan" aria-hidden="true"></div>
+              <span class="map-area area-one">Distrito San Miguel</span>
+              <span class="map-area area-two">Av. La Marina</span>
+              <span class="map-area area-three">Zona universitaria</span>
+              <span class="map-area area-four">Parque de apoyo</span>
+
+              <div class="map-block block-one">Residencial</div>
+              <div class="map-block block-two">Comercio</div>
+              <div class="map-block block-three">Campus</div>
+              <div class="map-block block-four">Centro vecinal</div>
+
+              <div class="road road-h road-h1"><span>Av. La Marina</span></div>
+              <div class="road road-h road-h2"><span>Av. Sucre</span></div>
+              <div class="road road-h road-h3"><span>Jr. Junín</span></div>
+              <div class="road road-h road-h4"><span>Av. Costanera</span></div>
+              <div class="road road-h road-h5"><span>Malecón</span></div>
+
+              <div class="road road-v road-v1"><span>Jr. Castilla</span></div>
+              <div class="road road-v road-v2"><span>Av. Universitaria</span></div>
+              <div class="road road-v road-v3"><span>Jr. Tacna</span></div>
+              <div class="road road-v road-v4"><span>Calle 1</span></div>
+              <div class="road road-v road-v5"><span>Calle 2</span></div>
+
+              <svg class="map-route-svg" viewBox="0 0 100 100" aria-hidden="true" preserveAspectRatio="none">
+                <path id="routeTrail" class="route-trail" d="M16 66 H64 V34" />
+                <path id="activeRoute" class="active-route" d="M16 66 H64 V34" />
+              </svg>
+
+              <div class="map-control-stack" aria-label="Controles simulados del mapa">
+                <button id="zoomInMap" type="button" aria-label="Acercar mapa">+</button>
+                <button id="zoomOutMap" type="button" aria-label="Alejar mapa">−</button>
+                <button id="resetMapView" type="button" aria-label="Vista inicial">⌂</button>
+              </div>
+
+              <div class="map-compass" aria-hidden="true">N</div>
+              <div class="map-scale" aria-hidden="true"><span></span>500 m</div>
+
+              <div class="user-location" id="userMarker">
+                <span></span><strong>Tu ubicación</strong>
+              </div>
+
+              <button class="clinic-pin pin-one active" data-clinic-id="0" aria-label="Clínica ReadyCare 24h"><span>+</span><small>0.8 km</small></button>
+              <button class="clinic-pin pin-two" data-clinic-id="1" aria-label="Clínica San Pablo"><span>+</span><small>1.6 km</small></button>
+              <button class="clinic-pin pin-three" data-clinic-id="2" aria-label="Centro Médico Universitario"><span>+</span><small>2.1 km</small></button>
+              <button class="clinic-pin pin-four" data-clinic-id="3" aria-label="Hospital de Emergencias"><span>+</span><small>2.6 km</small></button>
+              <button class="clinic-pin pin-five" data-clinic-id="4" aria-label="Policlínico Magdalena"><span>+</span><small>3.2 km</small></button>
+
+              <article id="mapInfoCard" class="map-info-card" aria-live="polite">
+                <span class="map-info-tag">Ruta recomendada</span>
+                <h3>Clínica ReadyCare 24h</h3>
+                <p>Av. La Marina 1235, San Miguel</p>
+                <div class="map-info-metrics">
+                  <span><strong id="routeDistance">0.8 km</strong> distancia</span>
+                  <span><strong id="routeTime">5 min</strong> llegada</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="map-status-row">
+              <span><strong id="nearestClinicName">ReadyCare 24h</strong> más cercana</span>
+              <span><strong id="mapZoomLabel">100%</strong> zoom simulado</span>
+              <span><strong>Sin API</strong> mapa emulado</span>
+            </div>
+            <p class="map-note">Los puntos, distancias, controles y rutas son simulados para mostrar el módulo sin servicios externos.</p>
+          </div>
+
+          <!-- Lista lateral de clínicas -->
+          <aside class="clinic-list-panel">
+            <div class="clinic-list-header">
+              <h3>Centros disponibles</h3>
+              <span id="clinicCount">5 resultados</span>
+            </div>
+            <div class="clinic-filters" aria-label="Filtros simulados de clínicas">
+              <button class="map-filter active" type="button" data-filter="all">Todas</button>
+              <button class="map-filter" type="button" data-filter="emergency">24h</button>
+              <button class="map-filter" type="button" data-filter="close">Más cerca</button>
+              <button class="map-filter" type="button" data-filter="general">General</button>
+            </div>
+            <div id="clinicList" class="clinic-list"></div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= CTA FINAL ============= -->
+    <section class="cta-section">
+      <div class="container cta-card reveal">
+        <div>
+          <span class="section-kicker light">Comienza ahora</span>
+          <h2>Haz que tu vivienda esté lista antes de la emergencia.</h2>
+          <p>Registra tu espacio, agrega contactos, crea rutas y revisa tu checklist de seguridad en minutos.</p>
+        </div>
+        <a href="registro.html" class="btn btn-primary btn-large">Registrarme en ReadyDorm</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============= FOOTER ============= -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#inicio">
+          <img src="assets/readydorm-icon.png" alt="ReadyDorm" class="brand-icon" style="filter: brightness(0) invert(1); opacity: 0.95;" />
+          <span class="brand-name" style="color: #fff;">ReadyDorm</span>
+        </a>
+        <p>Seguridad, organización y prevención para jóvenes que viven solos, con roommates o en residencias.</p>
+      </div>
+      <div>
+        <h4>Empresa</h4>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#sismo">Emergencias</a>
+        <a href="#clinicas">Clínicas cercanas</a>
+      </div>
+      <div>
+        <h4>Acceso</h4>
+        <a href="login.html">Iniciar Sesión</a>
+        <a href="registro.html">Registrarse</a>
+        <a href="#inicio">Volver arriba</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p>contacto@readydorm.pe</p>
+        <p>+51 999 888 777</p>
+        <p>Lima, Perú</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 ReadyDorm. Prototipo académico.</span>
+      <span>Hecho por universitarios peruanos.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
