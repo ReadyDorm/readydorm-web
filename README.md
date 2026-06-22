@@ -6,8 +6,8 @@ El repositorio contiene el avance de implementación de la Landing Page del proy
 
 ## Demo
 
-- Landing Page: [https://victor-pajuelo.github.io/readydorm-web/](https://victor-pajuelo.github.io/readydorm-web/)
-- Repositorio: [https://github.com/Victor-Pajuelo/readydorm-web](https://github.com/Victor-Pajuelo/readydorm-web)
+- Landing Page: [https://readydorm.github.io/readydorm-web/](https://readydorm.github.io/readydorm-web/)
+- Repositorio: [https://github.com/ReadyDorm/readydorm-web](https://github.com/ReadyDorm/readydorm-web)
 
 ## Integrantes
 
