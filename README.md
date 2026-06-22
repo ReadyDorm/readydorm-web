@@ -1,83 +1,111 @@
 # ReadyDorm Web
 
-ReadyDorm es un prototipo web de una plataforma SafetyTech para jovenes que viven solos, con roommates o en residencias. La pagina organiza herramientas de prevencion, respuesta y coordinacion ante emergencias como sismos, incendios, fugas de gas, inundaciones y cortes de luz.
+ReadyDorm es una solución SafetyTech orientada a mejorar la preparación, coordinación y respuesta de personas que viven solas, con roommates o en residencias ante situaciones de emergencia.
+
+El repositorio contiene el avance de implementación de la Landing Page del proyecto del curso **IHC y Tecnologías Móviles (1ASI0385)** de la Universidad Peruana de Ciencias Aplicadas.
 
 ## Demo
 
-Sitio publicado con GitHub Pages:
+- Landing Page: [https://victor-pajuelo.github.io/readydorm-web/](https://victor-pajuelo.github.io/readydorm-web/)
+- Repositorio: [https://github.com/Victor-Pajuelo/readydorm-web](https://github.com/Victor-Pajuelo/readydorm-web)
 
-[https://victor-pajuelo.github.io/readydorm-web/](https://victor-pajuelo.github.io/readydorm-web/)
+## Integrantes
 
-## Objetivo
+| Integrante | Código |
+| --- | --- |
+| Junior Cabrera Valverde | U20241E610 |
+| Abraham Gadiel Coronado Aliendres | U20241E328 |
+| Patrik Arnold Cruz Pallqui | U20241C737 |
+| Gricel Alexa Lluncor Salvador | U20241D149 |
+| Victor Andre Pajuelo Requena | U202410214 |
 
-El objetivo del prototipo es demostrar una experiencia integral de seguridad residencial que ayude a:
+## Segmentos objetivo
 
-- Preparar informacion medica y contactos de emergencia.
-- Activar alertas SOS con confirmacion y cancelacion.
-- Coordinar tareas entre roommates durante una crisis.
-- Consultar rutas de evacuacion y puntos seguros.
-- Gestionar mochila de emergencia, caducidades y gastos compartidos.
-- Apoyar a gestores con dashboard, alertas masivas, brigadistas y reportes.
-- Ubicar centros medicos cercanos mediante un mapa simulado.
+### Residentes jóvenes
 
-## Historias de Usuario
+Estudiantes y jóvenes que viven solos, con roommates o en residencias y necesitan prepararse, coordinar tareas y solicitar ayuda durante una emergencia.
 
-El prototipo cubre las 46 historias de usuario funcionales del proyecto ReadyDorm. Entre los modulos implementados se encuentran:
+### Gestores de residencias
 
-- Perfil, ficha medica y contactos de confianza.
-- Selector de rol para residente, gestor y contacto de emergencia.
-- Sistema SOS con presion sostenida, voz, linterna, alerta de piso, estado "Estoy a salvo" y cancelacion.
-- Directorio de auxilio con llamadas a numeros de emergencia de Peru.
-- Rutas de evacuacion por piso con ruta principal, ruta alterna y punto seguro.
-- Coordinacion de roommates con tareas, confirmacion, chat, suministros, gastos e intrusos.
-- Mochila inteligente con checklist, caducidad, mochila compartida y lista INDECI.
-- Preparacion con score, quiz, medallas, avisos de simulacros y primeros auxilios.
-- Vista para contactos familiares con alerta, ubicacion, llamada, ficha medica e historial.
-- Panel de gestor con estado de residentes, alertas, equipos, brigadistas, reportes y averias.
-- Mapa simulado de clinicas cercanas con filtros, rutas y distancias.
+Administradores de edificios, residencias universitarias o inmuebles compartidos que requieren monitorear residentes, emitir alertas y organizar recursos de seguridad.
 
-## Tecnologias
+### Contactos de emergencia
+
+Familiares o personas de confianza que necesitan recibir alertas, conocer la ubicación y consultar información médica crítica del residente.
+
+## Características principales
+
+- Perfil de emergencia, ficha médica y contactos de confianza.
+- Selección de rol para residentes, gestores y contactos.
+- Botón SOS con activación sostenida, voz, linterna y cancelación.
+- Reporte de estado "Estoy a salvo" y alertas de proximidad.
+- Directorio de números de emergencia del Perú.
+- Rutas de evacuación por piso, salida alterna y punto seguro.
+- Coordinación de roommates mediante roles, tareas y chat.
+- Mochila de 72 horas con checklist y alertas de caducidad.
+- Quizzes, score de preparación, medallas y simulacros.
+- Vista de seguimiento para familiares y contactos.
+- Dashboard para gestores, brigadistas, equipos y reportes.
+- Mapa simulado de centros médicos cercanos.
+
+El prototipo representa las 46 historias de usuario funcionales definidas para ReadyDorm.
+
+## Tecnologías
 
 - HTML5
 - CSS3
 - JavaScript
+- Google Fonts
+- Git y GitHub
 - GitHub Pages
 
-No se usan frameworks ni APIs pagadas. El mapa y las interacciones son simuladas para fines de prototipo academico.
+El proyecto no utiliza frameworks de CSS ni JavaScript.
 
-## Estructura
+## Estructura del proyecto
 
 ```text
 .
-├── assets/
-│   ├── readydorm-icon.png
-│   └── readydorm-logo.png
-├── css/
-│   └── style.css
-├── js/
-│   └── main.js
-├── index.html
-├── login.html
-├── registro.html
-└── README.md
+|-- public/
+|   |-- assets/
+|   |   |-- images/
+|   |   |   |-- readydorm-icon.png
+|   |   |   `-- readydorm-logo.png
+|   |   |-- scripts/
+|   |   |   `-- main.js
+|   |   `-- styles/
+|   |       `-- styles.css
+|   |-- favicon.ico
+|   |-- index.html
+|   |-- login.html
+|   `-- registro.html
+|-- .gitignore
+`-- README.md
 ```
 
-## Como ejecutar localmente
+## Flujo de trabajo GitFlow
 
-Abre `index.html` directamente en el navegador.
+- `main`: versión estable y publicada.
+- `develop`: rama de integración del equipo.
+- `feature/*`: ramas creadas desde `develop` para implementar funcionalidades o mejoras.
 
-Tambien puedes usar un servidor local simple desde la carpeta del proyecto:
+La reorganización solicitada para el challenge fue trabajada en la rama `feature/challenge-landing-structure`, integrada primero en `develop` y posteriormente en `main`.
+
+## Ejecución local
+
+La carpeta pública del proyecto es `public`.
 
 ```bash
-python -m http.server 8000
+python -m http.server 8000 --directory public
 ```
 
-Luego visita:
+Después, abre:
 
 ```text
 http://localhost:8000
 ```
 
-## Nota
+También puedes abrir directamente `public/index.html` en un navegador.
 
-Este repositorio contiene solo los archivos de la pagina web. Los documentos academicos internos y archivos PDF no forman parte del repositorio publicado.
+## Alcance académico
+
+El repositorio publica únicamente el código y los recursos de la Landing Page. Los documentos académicos internos y archivos PDF no forman parte del repositorio.
