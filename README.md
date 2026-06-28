@@ -1,6 +1,6 @@
 # ReadyDorm Web
 
-ReadyDorm es una solución SafetyTech orientada a mejorar la preparación, coordinación y respuesta de personas que viven solas, con roommates o en residencias ante situaciones de emergencia.
+ReadyDorm ayuda a estudiantes y residentes a prepararse, pedir ayuda y coordinar contactos ante una emergencia desde una sola plataforma. La landing page prioriza una propuesta de valor clara: tener un plan simple antes del riesgo y actuar rápido cuando cada segundo importa.
 
 El repositorio contiene el avance de implementación de la Landing Page del proyecto del curso **IHC y Tecnologías Móviles (1ASI0385)** de la Universidad Peruana de Ciencias Aplicadas.
 
@@ -19,11 +19,21 @@ El repositorio contiene el avance de implementación de la Landing Page del proy
 | Gricel Alexa Lluncor Salvador | U20241D149 |
 | Victor Andre Pajuelo Requena | U202410214 |
 
+## Enfoque de experiencia
+
+La landing fue organizada para responder de forma progresiva:
+
+1. **Problema:** muchos residentes no tienen contactos, rutas, datos médicos ni tareas claras ante una emergencia.
+2. **Solución:** ReadyDorm reúne perfil de emergencia, mochila, rutas, contactos y botón SOS en una sola experiencia.
+3. **Acción:** el usuario puede pedir ayuda, avisar que está a salvo, practicar simulacros o seguir una ruta de evacuación.
+
+Esta estructura reduce la carga cognitiva y evita presentar todas las funcionalidades con la misma prioridad desde el primer pantallazo.
+
 ## Segmentos objetivo
 
 ### Residentes jóvenes
 
-Estudiantes y jóvenes que viven solos, con roommates o en residencias y necesitan prepararse, coordinar tareas y solicitar ayuda durante una emergencia.
+Estudiantes y jóvenes que viven solos, con compañeros de vivienda o en residencias y necesitan prepararse, coordinar tareas y solicitar ayuda durante una emergencia.
 
 ### Gestores de residencias
 
@@ -41,14 +51,23 @@ Familiares o personas de confianza que necesitan recibir alertas, conocer la ubi
 - Reporte de estado "Estoy a salvo" y alertas de proximidad.
 - Directorio de números de emergencia del Perú.
 - Rutas de evacuación por piso, salida alterna y punto seguro.
-- Coordinación de roommates mediante roles, tareas y chat.
-- Mochila de 72 horas con checklist y alertas de caducidad.
-- Quizzes, score de preparación, medallas y simulacros.
+- Coordinación de compañeros de vivienda mediante roles, tareas y chat.
+- Mochila de 72 horas con lista de verificación y alertas de caducidad.
+- Preguntas rápidas, nivel de preparación, medallas y simulacros.
 - Vista de seguimiento para familiares y contactos.
-- Dashboard para gestores, brigadistas, equipos y reportes.
+- Panel de estado para gestores, brigadistas, equipos y reportes.
 - Mapa simulado de centros médicos cercanos.
 
 El prototipo representa las 46 historias de usuario funcionales definidas para ReadyDorm.
+
+## Criterios mejorados según feedback
+
+- Propuesta de valor más clara en el primer pantallazo.
+- Narrativa progresiva: problema, solución y acción.
+- Funcionalidades agrupadas por intención: prepararse, actuar y coordinar ayuda.
+- Lenguaje más directo para usuarios no técnicos.
+- Mayor refuerzo de confianza: uso de datos en emergencia, contactos de confianza y prácticas preventivas.
+- Llamadas a la acción más visibles: crear cuenta y ver cómo funciona.
 
 ## Tecnologías
 
@@ -78,6 +97,9 @@ El proyecto no utiliza frameworks de CSS ni JavaScript.
 |   |-- index.html
 |   |-- login.html
 |   `-- registro.html
+|-- .github/
+|   `-- workflows/
+|       `-- pages.yml
 |-- .gitignore
 `-- README.md
 ```

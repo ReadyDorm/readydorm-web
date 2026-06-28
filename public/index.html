@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ReadyDorm | SafetyTech residencial</title>
-  <meta name="description" content="ReadyDorm es una plataforma SafetyTech para jóvenes que viven solos, con roommates o en residencias. Prepárate, actúa y organízate ante cualquier emergencia." />
+  <title>ReadyDorm | Seguridad para residencias</title>
+  <meta name="description" content="ReadyDorm ayuda a estudiantes y residentes a prepararse, pedir ayuda y coordinar contactos ante una emergencia desde una sola plataforma." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@
             <a href="#corte-luz">Corte de luz</a>
           </div>
         </div>
-        <a href="#sos-demo" class="nav-link">SOS</a>
+        <a href="#sos-demo" class="nav-link">Botón SOS</a>
         <div class="dropdown" id="modulesDropdown">
           <button class="dropdown-button" type="button" aria-expanded="false">
             Módulos <span class="chevron">⌄</span>
@@ -49,8 +49,8 @@
             <a href="#nosotros">Nosotros</a>
             <a href="#perfil">Perfil y contactos</a>
             <a href="#rutas-evacuacion">Rutas</a>
-            <a href="#coordinacion">Roommates</a>
-            <a href="#mochila-smart">Mochila</a>
+            <a href="#coordinacion">Convivientes</a>
+            <a href="#mochila-smart">Mochila 72h</a>
             <a href="#gamificacion">Preparación</a>
             <a href="#contactos-vista">Contactos</a>
             <a href="#panel-gestor">Gestores</a>
@@ -74,19 +74,19 @@
       <div class="hero-glow hero-glow-two"></div>
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <div class="eyebrow"><span class="pulse-dot"></span> SafetyTech para residencias y dormis</div>
-          <h1>Tu hogar listo <span class="accent">antes, durante</span> y después de una emergencia.</h1>
+          <div class="eyebrow"><span class="pulse-dot"></span> Seguridad clara para residencias</div>
+          <h1>Prepárate y responde rápido ante una emergencia en tu residencia.</h1>
           <p class="hero-description">
-            ReadyDorm ayuda a jóvenes que viven solos, con roommates o en residencias a organizar alertas, planes de evacuación, checklist y ayuda médica cercana desde una sola plataforma.
+            ReadyDorm reúne tu perfil de emergencia, contactos de confianza, rutas y botón SOS para que sepas qué hacer, a quién avisar y cómo pedir ayuda sin perder tiempo.
           </p>
           <div class="hero-buttons">
-            <a href="registro.html" class="btn btn-primary btn-large">Crear cuenta gratis</a>
-            <a href="#sismo" class="btn btn-soft btn-large">Ver emergencias</a>
+            <a href="registro.html" class="btn btn-primary btn-large">Crear cuenta</a>
+            <a href="#como-funciona" class="btn btn-soft btn-large">Ver cómo funciona</a>
           </div>
           <div class="trust-row" aria-label="Beneficios principales">
-            <span>✓ Alertas rápidas</span>
-            <span>✓ Mapa simulado</span>
-            <span>✓ Checklist preventivo</span>
+            <span>✓ Plan listo en minutos</span>
+            <span>✓ Datos visibles solo en emergencia</span>
+            <span>✓ Contactos avisados al instante</span>
           </div>
         </div>
 
@@ -110,34 +110,75 @@
             <div class="preview-alert">
               <span>!</span>
               <div>
-                <strong>Plan de emergencia activo</strong>
-                <p>3 contactos · 2 rutas · 5 clínicas cerca</p>
+                <strong>Plan listo para actuar</strong>
+                <p>3 contactos · 2 rutas · ficha médica preparada</p>
               </div>
             </div>
             <div class="preview-progress"><span></span></div>
             <div class="preview-grid">
               <div class="preview-tile">
-                <small>Ruta principal</small>
+                <small>Evacuación</small>
                 <strong>Salida B</strong>
                 <p>Punto de encuentro: parque frontal</p>
               </div>
               <div class="preview-tile">
-                <small>Mochila lista</small>
+                <small>Preparación</small>
                 <strong>9 / 12</strong>
-                <p>Faltan 3 elementos esenciales</p>
+                <p>Elementos esenciales revisados</p>
               </div>
             </div>
             <div class="preview-actions">
-              <button>Activar SOS</button>
-              <button>Iniciar simulacro</button>
+              <button>Pedir ayuda</button>
+              <button>Practicar plan</button>
             </div>
             <div class="preview-chips">
-              <span class="ok">● Sismo · listo</span>
-              <span>Incendio · revisar</span>
-              <span class="warn">● Fuga · pendiente</span>
-              <span>Inundación</span>
+              <span class="ok">● Perfil completo</span>
+              <span>Ruta revisada</span>
+              <span class="warn">● Mochila pendiente</span>
+              <span>Contactos activos</span>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= NARRATIVA PRINCIPAL ============= -->
+    <section class="section narrative-section" id="como-funciona">
+      <div class="container">
+        <div class="section-heading reveal" style="text-align:center;">
+          <span class="section-kicker">Problema, solución y acción</span>
+          <h2>Cuando ocurre una emergencia, la diferencia es tener un plan simple.</h2>
+          <p>ReadyDorm evita que el usuario tenga que improvisar: organiza la información crítica antes del riesgo y guía la respuesta cuando cada segundo importa.</p>
+        </div>
+
+        <div class="narrative-grid reveal delay-1">
+          <article class="narrative-card">
+            <span class="narrative-step">1</span>
+            <h3>El problema</h3>
+            <p>Muchos residentes no tienen contactos, rutas, datos médicos ni tareas claras cuando ocurre un sismo, incendio o fuga de gas.</p>
+          </article>
+          <article class="narrative-card highlighted">
+            <span class="narrative-step">2</span>
+            <h3>La solución</h3>
+            <p>ReadyDorm convierte esa preparación en un plan visible: perfil, mochila, rutas, contactos y señales de ayuda en una sola experiencia.</p>
+          </article>
+          <article class="narrative-card">
+            <span class="narrative-step">3</span>
+            <h3>La acción</h3>
+            <p>El usuario puede pedir ayuda, reportar que está a salvo o seguir una ruta sin revisar varias aplicaciones ni depender de la memoria.</p>
+          </article>
+        </div>
+
+        <div class="trust-panel reveal">
+          <div>
+            <span class="section-kicker">Confianza</span>
+            <h3>Diseñado para situaciones sensibles, no para llenar formularios.</h3>
+          </div>
+          <ul class="trust-list">
+            <li>La ficha médica se usa como apoyo cuando hay una emergencia.</li>
+            <li>Los contactos de confianza reciben información útil para actuar rápido.</li>
+            <li>Las rutas, simulacros y listas se basan en prácticas de preparación preventiva.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -148,8 +189,8 @@
       <div class="container">
         <div class="section-heading reveal" style="text-align:center;">
           <span class="section-kicker">¿Para quién?</span>
-          <h2>Una plataforma, tres experiencias de seguridad.</h2>
-          <p>Elige tu perfil al registrarte y accede solo a las funciones diseñadas para tu rol.</p>
+          <h2>La misma emergencia se vive distinto según tu rol.</h2>
+          <p>Por eso ReadyDorm muestra solo lo necesario para residentes, contactos de emergencia y gestores de residencia.</p>
         </div>
         <div class="seg-tab-bar reveal delay-1" id="segTabBar">
           <button class="seg-tab active" data-seg="residente">🏠 Residente</button>
@@ -163,17 +204,17 @@
             <div class="seg-features-grid">
               <div class="seg-feat-card"><span class="sf-icon">🆘</span><h4>Botón SOS</h4><p>Activa una alerta de pánico con 3 segundos de presión continua desde cualquier pantalla.</p></div>
               <div class="seg-feat-card"><span class="sf-icon">🩺</span><h4>Ficha médica</h4><p>Registra tipo de sangre, alergias y condiciones para que los paramédicos actúen rápido.</p></div>
-              <div class="seg-feat-card"><span class="sf-icon">🎒</span><h4>Mochila de 72h</h4><p>Checklist inteligente que rastrea qué tienes, qué vence y qué falta en tu kit.</p></div>
-              <div class="seg-feat-card"><span class="sf-icon">🗺️</span><h4>Rutas de evacuación</h4><p>Plano de tu piso con rutas marcadas y punto de encuentro con tus roommates.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">🎒</span><h4>Mochila de 72h</h4><p>Lista de verificación que muestra qué tienes, qué vence y qué falta en tu kit.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">🗺️</span><h4>Rutas de evacuación</h4><p>Plano de tu piso con rutas marcadas y punto de encuentro con tus convivientes.</p></div>
               <div class="seg-feat-card"><span class="sf-icon">🔦</span><h4>Linterna de emergencia</h4><p>Activa el flash LED desde la pantalla SOS para orientarte en la oscuridad.</p></div>
-              <div class="seg-feat-card"><span class="sf-icon">🏆</span><h4>Score de preparación</h4><p>Puntaje del 1 al 100 basado en tu mochila y simulacros completados.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">🏆</span><h4>Nivel de preparación</h4><p>Indicador simple basado en tu mochila y simulacros completados.</p></div>
             </div>
           </div>
 
           <!-- GESTOR -->
           <div class="seg-panel" id="seg-gestor">
             <div class="seg-features-grid">
-              <div class="seg-feat-card"><span class="sf-icon">📊</span><h4>Dashboard de estado</h4><p>Visualiza en tiempo real quiénes reportaron estar a salvo y quiénes aún no responden.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">📊</span><h4>Panel de estado</h4><p>Visualiza en tiempo real quiénes reportaron estar a salvo y quiénes aún no responden.</p></div>
               <div class="seg-feat-card"><span class="sf-icon">📢</span><h4>Alerta masiva</h4><p>Envía una orden de evacuación a todos los residentes del edificio o por sectores.</p></div>
               <div class="seg-feat-card"><span class="sf-icon">🚒</span><h4>Brigadistas</h4><p>Identifica residentes con capacidad médica o de rescate y asígnales credencial digital.</p></div>
               <div class="seg-feat-card"><span class="sf-icon">🧯</span><h4>Mapa de equipos</h4><p>Registra la ubicación de extintores y mangueras para que los residentes los ubiquen rápido.</p></div>
@@ -185,8 +226,8 @@
           <!-- CONTACTO -->
           <div class="seg-panel" id="seg-contacto">
             <div class="seg-features-grid">
-              <div class="seg-feat-card"><span class="sf-icon">🔔</span><h4>Recepción de alerta SOS</h4><p>Recibe notificación de alta prioridad con bypass del modo silencio cuando el residente active el SOS.</p></div>
-              <div class="seg-feat-card"><span class="sf-icon">📍</span><h4>Ver ubicación GPS</h4><p>Abre el mapa y ve la ubicación exacta del residente en tiempo real para enviar ayuda.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">🔔</span><h4>Recepción de alerta SOS</h4><p>Recibe una notificación crítica cuando el residente active el SOS.</p></div>
+              <div class="seg-feat-card"><span class="sf-icon">📍</span><h4>Ver ubicación compartida</h4><p>Abre el mapa y ve la ubicación del residente en tiempo real para enviar ayuda.</p></div>
               <div class="seg-feat-card"><span class="sf-icon">📞</span><h4>Llamada rápida</h4><p>Un toque para llamar al residente directamente desde la pantalla de alerta activa.</p></div>
               <div class="seg-feat-card"><span class="sf-icon">🧭</span><h4>Navegación hacia el residente</h4><p>Traza una ruta desde tu ubicación hasta la del residente para acudir lo más rápido posible.</p></div>
               <div class="seg-feat-card"><span class="sf-icon">🩺</span><h4>Ficha médica de emergencia</h4><p>Accede a los datos médicos del residente para informar a los paramédicos si está inconsciente.</p></div>
@@ -223,7 +264,7 @@
             <p>ReadyDorm te da múltiples formas de pedir ayuda sin importar la situación: por botón, por voz, o marcando tu estado en segundos.</p>
             <ul class="sos-feature-list">
               <li><span class="sfl-dot coral"></span><strong>HU-06</strong> — Botón SOS con 3 segundos de presión</li>
-              <li><span class="sfl-dot coral"></span><strong>HU-07</strong> — Activación por voz "ReadyDorm activa SOS"</li>
+              <li><span class="sfl-dot coral"></span><strong>HU-07</strong> — Activación por voz con una frase simple</li>
               <li><span class="sfl-dot support"></span><strong>HU-08</strong> — Reporte "Estoy a salvo" para tranquilizar a la familia</li>
               <li><span class="sfl-dot coral"></span><strong>HU-09</strong> — Alerta automática si hay incendio en tu piso</li>
               <li><span class="sfl-dot accent"></span><strong>HU-10</strong> — Linterna de emergencia integrada en el SOS</li>
@@ -277,7 +318,7 @@
                 <div id="sosStateSent" style="display:none;text-align:center;">
                   <div class="sp-sent-icon">🆘</div>
                   <h3 style="color:#FA6A63;margin:12px 0 6px;">SOS Enviado</h3>
-                  <p style="font-size:13px;color:#6D7B8A;">3 contactos notificados<br>Ubicación GPS compartida</p>
+                  <p style="font-size:13px;color:#6D7B8A;">3 contactos notificados<br>Ubicación compartida</p>
                   <button class="sos-cancel-btn" id="sosCancelBtn" onclick="cancelSOS()">
                     🚫 Cancelar (falsa alarma)
                   </button>
@@ -305,13 +346,13 @@
                     <span></span><span></span><span></span><span></span><span></span>
                   </div>
                   <p style="margin:12px 0 4px;font-weight:600;">Escuchando...</p>
-                  <small style="color:#6D7B8A;">Di: "ReadyDorm activa SOS"</small>
+                  <small style="color:#6D7B8A;">Di: "activar emergencia"</small>
                   <button class="btn btn-soft" style="margin-top:16px;font-size:13px;" onclick="resetSOS()">Cancelar</button>
                 </div>
               </div>
 
               <div class="sp-bottom">
-                <span>GPS activo</span>
+                <span>Ubicación activa</span>
                 <span id="torchStatus">Linterna: apagada</span>
               </div>
             </div>
@@ -329,10 +370,10 @@
           <span class="section-kicker">Nosotros</span>
           <h2>Una plataforma para que vivir independiente también sea vivir preparado.</h2>
           <p>
-            ReadyDorm nace porque muchos estudiantes y jóvenes viven solos o con roommates, pero no siempre tienen un plan claro ante sismos, incendios, fugas de gas o cortes de luz.
+            ReadyDorm nace porque muchos estudiantes y jóvenes viven solos o con compañeros de vivienda, pero no siempre tienen un plan claro ante sismos, incendios, fugas de gas o cortes de luz.
           </p>
           <p>
-            La propuesta combina prevención, organización y respuesta rápida con herramientas fáciles: contactos, rutas, checklist, simulacros y ayuda cercana en una sola experiencia.
+            La propuesta combina prevención, organización y respuesta rápida con herramientas fáciles: contactos, rutas, lista de verificación, simulacros y ayuda cercana en una sola experiencia.
           </p>
           <div class="about-actions">
             <a href="#clinicas" class="btn btn-dark">Buscar ayuda cercana</a>
@@ -344,7 +385,7 @@
             <span>01</span>
             <div>
               <h3>Prevención</h3>
-              <p>Checklist, mochila, roles y rutas preparadas antes del riesgo.</p>
+              <p>Lista de verificación, mochila, roles y rutas preparadas antes del riesgo.</p>
             </div>
           </article>
           <article class="metric-card highlighted">
@@ -445,13 +486,13 @@
               <span class="pc-icon">🔒</span>
               <div>
                 <h3>Privacidad y acceso <span class="hu-tag">HU-03 HU-04</span></h3>
-                <small>Controla GPS y autenticación</small>
+                <small>Controla ubicación y autenticación</small>
               </div>
             </div>
             <div class="toggle-list">
               <div class="toggle-item">
                 <div>
-                  <strong>GPS solo en emergencias</strong>
+                  <strong>Ubicación solo en emergencias</strong>
                   <small>Compartir ubicación solo al activar SOS</small>
                 </div>
                 <label class="rd-switch">
@@ -531,7 +572,7 @@
               <li>Identifica columnas, muros estructurales y zonas seguras.</li>
               <li>Ten una mochila de emergencia cerca de la salida.</li>
               <li>Asegura muebles altos, repisas y objetos pesados.</li>
-              <li>Coordina un punto de encuentro con tus roommates.</li>
+              <li>Coordina un punto de encuentro con tus compañeros de vivienda.</li>
             </ul>
           </article>
           <article class="info-card accent-card coral-card">
@@ -703,7 +744,7 @@
               <li>Desconecta equipos sensibles para evitar daños.</li>
               <li>No uses velas cerca de cortinas o papel.</li>
               <li>Evita abrir constantemente la refrigeradora.</li>
-              <li>Comparte información con tus roommates.</li>
+              <li>Comparte información con tus compañeros de vivienda.</li>
             </ul>
           </article>
           <article class="info-card">
@@ -712,7 +753,7 @@
             <ul>
               <li>Conecta los equipos poco a poco.</li>
               <li>Revisa si hubo olor a quemado o cortocircuito.</li>
-              <li>Actualiza tu checklist si faltó algún elemento.</li>
+              <li>Actualiza tu lista si faltó algún elemento.</li>
               <li>Carga nuevamente tus dispositivos de emergencia.</li>
             </ul>
           </article>
@@ -824,7 +865,7 @@
           <!-- Chat de emergencia HU_19 -->
           <div class="coord-card">
             <h3>💬 Chat de emergencia <span class="hu-tag">HU-19</span></h3>
-            <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">Canal directo solo con tus roommates durante la evacuación.</p>
+            <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">Canal directo solo con tus compañeros de vivienda durante la evacuación.</p>
             <div class="chat-box" id="chatBox">
               <div class="chat-bubble received"><strong>Mateo:</strong> Ya bajé por escalera B 🟢</div>
               <div class="chat-bubble received"><strong>Valeria:</strong> Esperando en parque frontal</div>
@@ -889,10 +930,10 @@
         <div class="backpack-copy">
           <span class="section-kicker light">Mochila de emergencia</span>
           <h2>Elementos esenciales para cada residente.</h2>
-          <p>Una mochila bien armada cubre las primeras 72 horas. ReadyDorm convierte esta lista en un checklist interactivo y te avisa qué falta revisar.</p>
+          <p>Una mochila bien armada cubre las primeras 72 horas. ReadyDorm convierte esta lista en una verificación interactiva y te avisa qué falta revisar.</p>
           <div class="btn-row">
             <a href="registro.html" class="btn btn-primary">Revisar mi mochila</a>
-            <a href="#" class="btn btn-glass">Descargar checklist</a>
+            <a href="#" class="btn btn-glass">Descargar lista</a>
           </div>
         </div>
         <div class="backpack-grid">
@@ -919,7 +960,7 @@
         <div class="section-heading reveal" style="text-align:center;">
           <span class="section-kicker">Mochila inteligente</span>
           <h2>Sabe qué tienes, qué vence y qué falta.</h2>
-          <p>ReadyDorm convierte tu lista de emergencia en un sistema vivo: checklist interactivo, alertas de caducidad y mochila compartida con tus roommates.</p>
+          <p>ReadyDorm convierte tu lista de emergencia en un sistema vivo: verificación interactiva, alertas de caducidad y mochila compartida con tus compañeros de vivienda.</p>
         </div>
 
         <div class="bsm-tabs reveal delay-1" id="bsmTabBar">
@@ -1001,7 +1042,7 @@
         <div class="section-heading reveal" style="text-align:center;">
           <span class="section-kicker">Aprende y prepárate</span>
           <h2>La preparación también puede ser un juego.</h2>
-          <p>Quizzes, simulacros y un score de preparación que te motiva a mantener tu kit siempre al día.</p>
+          <p>Preguntas rápidas, simulacros y un nivel de preparación que te motiva a mantener tu kit siempre al día.</p>
         </div>
 
         <div class="gamif-grid">
@@ -1023,16 +1064,16 @@
 
             <div id="quizResult" style="display:none;text-align:center;">
               <div style="font-size:48px;margin:16px 0;">🏆</div>
-              <h3 id="quizFinalScore" style="color:var(--primary);">¡Puntaje: 4/5!</h3>
+              <h3 id="quizFinalScore" style="color:var(--primary);">¡Resultado: 4/5!</h3>
               <p style="color:var(--muted);font-size:14px;">Excelente preparación. Ganaste la medalla de Experto en Sismos.</p>
               <div class="badge-earned">🥇 Experto en Sismos</div>
               <button class="btn btn-primary" style="margin-top:16px;" onclick="resetQuiz()">Intentar de nuevo</button>
             </div>
           </div>
 
-          <!-- Score de preparación HU_26 + Medallas HU_43 -->
+          <!-- Nivel de preparación HU_26 + Medallas HU_43 -->
           <div class="gamif-card reveal delay-1">
-            <h3>📊 Score de preparación <span class="hu-tag">HU-26</span></h3>
+            <h3>📊 Nivel de preparación <span class="hu-tag">HU-26</span></h3>
             <div class="score-display">
               <div class="score-circle" id="scoreCircle">
                 <strong id="scoreValue">75</strong>
@@ -1131,7 +1172,7 @@
             <div class="tutorial-steps">
               <div class="ts-item"><span class="ts-num">1</span><div><strong>Configura tu perfil</strong><p>Ficha médica, contactos de confianza y selección de rol (Residente o Gestor).</p></div></div>
               <div class="ts-item"><span class="ts-num">2</span><div><strong>Activa el SOS</strong><p>Mantén presionado el botón rojo 3 segundos. Tus contactos recibirán tu ubicación al instante.</p></div></div>
-              <div class="ts-item"><span class="ts-num">3</span><div><strong>Coordina con roommates</strong><p>Cada uno tiene su rol: gas, luz o evacuación. Confirman desde su app cuando completan la tarea.</p></div></div>
+              <div class="ts-item"><span class="ts-num">3</span><div><strong>Coordina con tus convivientes</strong><p>Cada uno tiene su rol: gas, luz o evacuación. Confirman desde su app cuando completan la tarea.</p></div></div>
               <div class="ts-item"><span class="ts-num">4</span><div><strong>Reporta tu estado</strong><p>Presiona "Estoy a salvo" para que tu familia sepa que estás bien sin necesidad de llamar.</p></div></div>
             </div>
             <button class="btn btn-primary" style="width:100%;margin-top:16px;" onclick="closeTutorial()">¡Entendido, estoy listo!</button>
@@ -1151,8 +1192,8 @@
             <h2>Saber que tu familiar está bien, en segundos.</h2>
             <p>ReadyDorm le da a tus contactos de confianza todas las herramientas para actuar con rapidez y sin pánico cuando reciben una alerta.</p>
             <ul class="sos-feature-list">
-              <li><span class="sfl-dot coral"></span><strong>HU-30</strong> — Alerta de alta prioridad con bypass del silencio</li>
-              <li><span class="sfl-dot coral"></span><strong>HU-31</strong> — Mapa GPS con ubicación exacta del residente</li>
+              <li><span class="sfl-dot coral"></span><strong>HU-30</strong> — Alerta crítica aunque el celular esté en silencio</li>
+              <li><span class="sfl-dot coral"></span><strong>HU-31</strong> — Mapa con ubicación exacta del residente</li>
               <li><span class="sfl-dot support"></span><strong>HU-32</strong> — Confirmación de lectura enviada al residente</li>
               <li><span class="sfl-dot coral"></span><strong>HU-33</strong> — Acceso a la ficha médica para paramédicos</li>
               <li><span class="sfl-dot accent"></span><strong>HU-34</strong> — Botón de llamada rápida con número marcado</li>
@@ -1226,7 +1267,7 @@
         <div class="section-heading reveal" style="text-align:center;">
           <span class="section-kicker">Panel del gestor</span>
           <h2>Control total del edificio en una sola pantalla.</h2>
-          <p>El Safety Lead tiene acceso a herramientas avanzadas: alertas masivas, brigadistas, mapa de equipos y reportes INDECI.</p>
+          <p>El gestor de seguridad tiene acceso a herramientas avanzadas: alertas masivas, brigadistas, mapa de equipos y reportes INDECI.</p>
         </div>
 
         <div class="gestor-tabs reveal delay-1" id="gestorTabBar">
@@ -1509,7 +1550,7 @@
         <div>
           <span class="section-kicker light">Comienza ahora</span>
           <h2>Haz que tu vivienda esté lista antes de la emergencia.</h2>
-          <p>Registra tu espacio, agrega contactos, crea rutas y revisa tu checklist de seguridad en minutos.</p>
+          <p>Registra tu espacio, agrega contactos, crea rutas y revisa tu lista de seguridad en minutos.</p>
         </div>
         <a href="registro.html" class="btn btn-primary btn-large">Registrarme en ReadyDorm</a>
       </div>
@@ -1525,7 +1566,7 @@
           <img src="assets/images/readydorm-icon.png" alt="ReadyDorm" class="brand-icon" style="filter: brightness(0) invert(1); opacity: 0.95;" />
           <span class="brand-name" style="color: #fff;">ReadyDorm</span>
         </a>
-        <p>Seguridad, organización y prevención para jóvenes que viven solos, con roommates o en residencias.</p>
+        <p>Seguridad, organización y prevención para jóvenes que viven solos, con compañeros de vivienda o en residencias.</p>
       </div>
       <div>
         <h4>Empresa</h4>

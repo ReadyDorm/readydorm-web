@@ -483,7 +483,7 @@ function initSOSDemo() {
 
 function triggerSOS() {
   showSOSState("sosStateSent");
-  showToast("🆘 SOS activado — 3 contactos notificados con GPS");
+  showToast("🆘 SOS activado — 3 contactos notificados con tu ubicación");
 }
 
 function cancelSOS() {
@@ -562,9 +562,9 @@ function addContact() {
   showToast("✅ Contacto vinculado. SMS de invitación enviado.");
 }
 
-function toggleGPS(el)   { showToast(el.checked ? "GPS: solo durante SOS ✓" : "GPS: compartir siempre"); }
+function toggleGPS(el)   { showToast(el.checked ? "Ubicación: solo durante SOS ✓" : "Ubicación: compartir siempre"); }
 function toggleBio(el)   { showToast(el.checked ? "Acceso biométrico activado ✓" : "Biometría desactivada"); }
-function toggleNotif(el) { showToast(el.checked ? "Notificaciones críticas: bypass silencio ✓" : "Notificaciones normales"); }
+function toggleNotif(el) { showToast(el.checked ? "Notificaciones críticas: activas en silencio ✓" : "Notificaciones normales"); }
 
 function selectResident(card, name) {
   document.querySelectorAll(".rs-card").forEach(c => c.classList.remove("active"));
@@ -736,7 +736,7 @@ function showQuizResult() {
   const score  = document.getElementById("quizFinalScore");
   if (area)   area.style.display   = "none";
   if (result) result.style.display = "block";
-  if (score)  score.textContent    = `¡Puntaje: ${quizScore}/${QUIZ.length}!`;
+  if (score)  score.textContent    = `¡Resultado: ${quizScore}/${QUIZ.length}!`;
   if (quizScore >= 4) {
     const badge = document.getElementById("badgeGrid");
     if (badge) {
@@ -761,7 +761,7 @@ let drillInterval = null, drillSeconds = 0, drillStep = 0;
 const DRILL_STEPS = [
   "Paso 1: Activa el botón SOS en tu teléfono",
   "Paso 2: Confirma tu rol (gas, luz o evacuación)",
-  "Paso 3: Notifica a tus roommates y baja por las escaleras",
+  "Paso 3: Avisa a tus compañeros de vivienda y baja por las escaleras",
   "Paso 4: Llega al punto de encuentro y reporta 'Estoy a salvo'"
 ];
 

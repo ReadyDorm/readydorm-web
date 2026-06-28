@@ -414,6 +414,7 @@ p { color: var(--muted); }
 .hero-copy h1 {
   margin-bottom: 22px;
   color: var(--primary-deep);
+  max-width: 680px;
 }
 .hero-copy h1 .accent { color: var(--alert); }
 
@@ -612,6 +613,87 @@ p { color: var(--muted); }
 .float-card.fc-1 .dot { background: var(--support); box-shadow: 0 0 0 4px var(--support-soft); }
 .float-card.fc-2 { bottom: 12%; right: -18px; }
 .float-card.fc-2 .dot { background: var(--alert); box-shadow: 0 0 0 4px #FFE4E2; }
+
+/* -----------------------------
+   7.1 NARRATIVA Y CONFIANZA
+   ----------------------------- */
+.narrative-section {
+  background:
+    linear-gradient(180deg, #fff 0%, var(--surface-alt) 100%);
+}
+.narrative-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.narrative-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 26px;
+  box-shadow: 0 8px 24px rgba(14, 59, 100, 0.05);
+  min-height: 230px;
+}
+.narrative-card.highlighted {
+  border-color: rgba(46, 197, 182, 0.45);
+  box-shadow: 0 18px 40px rgba(46, 197, 182, 0.12);
+}
+.narrative-step {
+  width: 36px;
+  height: 36px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+.narrative-card.highlighted .narrative-step { background: var(--support); }
+.narrative-card h3 {
+  color: var(--primary-deep);
+  margin-bottom: 10px;
+}
+.narrative-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.trust-panel {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.95fr) minmax(0, 1.45fr);
+  gap: 24px;
+  align-items: center;
+  background: var(--primary-deep);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  box-shadow: var(--shadow-soft);
+}
+.trust-panel .section-kicker { color: var(--support); }
+.trust-panel h3 {
+  color: #fff;
+  margin-top: 8px;
+}
+.trust-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+.trust-list li {
+  position: relative;
+  padding-left: 26px;
+  color: rgba(255,255,255,0.82);
+  font-size: 0.94rem;
+}
+.trust-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--support);
+  font-weight: 800;
+}
 
 /* -----------------------------
    8. FRANJA DE EMERGENCIAS
@@ -1883,9 +1965,11 @@ p { color: var(--muted); }
    ----------------------------- */
 @media (max-width: 1100px) {
   .hero-grid,
+  .narrative-grid,
   .split-grid,
   .backpack-card,
   .map-layout,
+  .trust-panel,
   .cta-card,
   .auth-layout {
     grid-template-columns: 1fr;
@@ -1933,6 +2017,8 @@ p { color: var(--muted); }
   .section { padding: 72px 0; }
   .hero { padding: 60px 0 80px; }
   .hero-visual { padding: 22px; }
+  .narrative-card { min-height: auto; }
+  .trust-panel { padding: 26px; }
   .emergency-strip-grid { grid-template-columns: 1fr 1fr; }
   .es-title { grid-column: 1 / -1; }
   .detail-grid.three-cols, .detail-grid.two-cols { grid-template-columns: 1fr; }
