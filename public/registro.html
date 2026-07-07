@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Registrarse | ReadyDorm</title>
+  <title>Create account | ReadyDorm</title>
+  <meta name="description" content="Create an account in the ReadyDorm academic prototype." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -11,80 +12,75 @@
   <link rel="stylesheet" href="assets/styles/styles.css" />
   <script defer src="assets/scripts/main.js"></script>
 </head>
-<body class="auth-body register-page">
+<body class="auth-body">
+  <a class="skip-link" href="#registerForm">Skip to registration form</a>
 
   <main class="auth-layout">
-
-    <!-- ============ COLUMNA IZQUIERDA (visual) ============ -->
-    <section class="auth-visual register-visual">
-      <a class="brand auth-brand" href="index.html#inicio" aria-label="Volver a ReadyDorm">
-        <img src="assets/images/readydorm-icon.png" alt="ReadyDorm" class="brand-icon" />
+    <section class="auth-visual" aria-labelledby="register-title">
+      <a class="brand auth-brand" href="index.html#home" aria-label="Back to ReadyDorm home">
+        <img src="assets/images/readydorm-icon.png" alt="" class="brand-icon" />
         <span class="brand-name">ReadyDorm</span>
       </a>
 
       <div class="auth-message">
-        <span class="section-kicker light">Crea tu espacio seguro</span>
-        <h1>Organiza tu vivienda antes de cualquier emergencia.</h1>
-        <p>Registra tu residencia, agrega roommates y prepara tu plan de acción con una plataforma diseñada para jóvenes.</p>
+        <span class="section-kicker light">Create your safe space</span>
+        <h1 id="register-title">Organize your residence before an emergency happens.</h1>
+        <p>Register your home, add roommates, and prepare an action plan for fast response.</p>
       </div>
 
-      <div class="register-benefits">
-        <span>Contactos de emergencia</span>
-        <span>Rutas y puntos de encuentro</span>
-        <span>Checklist de mochila</span>
+      <div class="register-benefits" aria-label="Account benefits">
+        <span>Emergency contacts</span>
+        <span>Routes and meeting points</span>
+        <span>Backpack checklist</span>
       </div>
 
-      <p class="auth-footer-meta">© 2026 ReadyDorm · Prototipo académico</p>
+      <p class="auth-footer-meta">2026 ReadyDorm. Academic prototype.</p>
     </section>
 
-    <!-- ============ COLUMNA DERECHA (formulario) ============ -->
-    <section class="auth-form-panel">
-      <div class="auth-form-card register-card">
-        <a href="index.html#inicio" class="back-link">← Volver al inicio</a>
-        <h2>Crear cuenta</h2>
-        <p>Completa tus datos. Al registrarte, volverás a la página principal.</p>
+    <section class="auth-form-panel" aria-labelledby="form-title">
+      <div class="auth-form-card">
+        <a href="index.html#home" class="back-link">Back to home</a>
+        <h2 id="form-title">Create account</h2>
+        <p>Complete your details. This prototype returns to the landing page after registration.</p>
 
         <form class="auth-form" id="registerForm">
           <div class="two-field-grid">
-            <label>
-              Nombre
-              <input type="text" placeholder="Tu nombre" required>
-            </label>
-            <label>
-              Apellido
-              <input type="text" placeholder="Tu apellido" required>
-            </label>
+            <div>
+              <label for="firstName">First name</label>
+              <input id="firstName" name="firstName" type="text" placeholder="Your first name" autocomplete="given-name" required>
+            </div>
+            <div>
+              <label for="lastName">Last name</label>
+              <input id="lastName" name="lastName" type="text" placeholder="Your last name" autocomplete="family-name" required>
+            </div>
           </div>
-          <label>
-            Correo electrónico
-            <input type="email" placeholder="tu.correo@email.com" required>
+
+          <label for="registerEmail">Email address</label>
+          <input id="registerEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+
+          <label for="housingType">Housing type</label>
+          <select id="housingType" name="housingType" required>
+            <option value="">Select an option</option>
+            <option>Apartment with roommates</option>
+            <option>University residence</option>
+            <option>I live alone</option>
+            <option>Family home</option>
+            <option>Property manager</option>
+          </select>
+
+          <label for="registerPassword">Password</label>
+          <input id="registerPassword" name="password" type="password" placeholder="At least 8 characters" autocomplete="new-password" minlength="8" required>
+
+          <label class="check-label" for="terms">
+            <input id="terms" type="checkbox" required> I accept the terms and privacy policy.
           </label>
-          <label>
-            Tipo de vivienda
-            <select required>
-              <option value="">Selecciona una opción</option>
-              <option>Departamento con roommates</option>
-              <option>Residencia universitaria</option>
-              <option>Vivo solo / sola</option>
-              <option>Casa familiar</option>
-              <option>Gestor de propiedad</option>
-            </select>
-          </label>
-          <label>
-            Contraseña
-            <input type="password" placeholder="Mínimo 8 caracteres" required minlength="8">
-          </label>
-          <label class="check-label terms">
-            <input type="checkbox" required> Acepto los términos y la política de privacidad.
-          </label>
-          <button type="submit" class="btn btn-primary btn-full btn-large">Crear mi cuenta</button>
+
+          <button type="submit" class="btn btn-primary btn-full btn-large">Create my account</button>
         </form>
 
-        <p class="auth-switch">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+        <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
       </div>
     </section>
-
   </main>
-
 </body>
 </html>

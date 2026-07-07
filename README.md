@@ -1,17 +1,15 @@
 # ReadyDorm Web
 
-ReadyDorm ayuda a estudiantes y residentes a prepararse, pedir ayuda y coordinar contactos ante una emergencia desde una sola plataforma. La landing page prioriza una propuesta de valor clara: tener un plan simple antes del riesgo y actuar rápido cuando cada segundo importa.
-
-El repositorio contiene el avance de implementación de la Landing Page del proyecto del curso **IHC y Tecnologías Móviles (1ASI0385)** de la Universidad Peruana de Ciencias Aplicadas.
+ReadyDorm is an academic landing page for an emergency-readiness product designed for students, roommates, families, and residence managers. The final version is written in English, includes the required "About the Product" and "About the Team" videos, and is deployed with GitHub Pages.
 
 ## Demo
 
 - Landing Page: [https://readydorm.github.io/readydorm-web/](https://readydorm.github.io/readydorm-web/)
-- Repositorio: [https://github.com/ReadyDorm/readydorm-web](https://github.com/ReadyDorm/readydorm-web)
+- Repository: [https://github.com/ReadyDorm/readydorm-web](https://github.com/ReadyDorm/readydorm-web)
 
-## Integrantes
+## Team
 
-| Integrante | Código |
+| Member | Code |
 | --- | --- |
 | Junior Cabrera Valverde | U20241E610 |
 | Abraham Gadiel Coronado Aliendres | U20241E328 |
@@ -19,68 +17,37 @@ El repositorio contiene el avance de implementación de la Landing Page del proy
 | Gricel Alexa Lluncor Salvador | U20241D149 |
 | Victor Andre Pajuelo Requena | U202410214 |
 
-## Enfoque de experiencia
+## Final Landing Page Scope
 
-La landing fue organizada para responder de forma progresiva:
+The final landing page satisfies the requested delivery criteria:
 
-1. **Problema:** muchos residentes no tienen contactos, rutas, datos médicos ni tareas claras ante una emergencia.
-2. **Solución:** ReadyDorm reúne perfil de emergencia, mochila, rutas, contactos y botón SOS en una sola experiencia.
-3. **Acción:** el usuario puede pedir ayuda, avisar que está a salvo, practicar simulacros o seguir una ruta de evacuación.
+- English interface with `lang="en"` for internationalization.
+- Responsive layout for desktop, tablet, and mobile screens.
+- "About the Product" video with controls, captions, poster, and transcript.
+- "About the Team" video with controls, captions, poster, and transcript.
+- Accessibility-oriented structure: semantic landmarks, skip links, labels, alt text, visible focus states, keyboard-friendly navigation, captions, and reduced-motion support.
+- GitHub Pages deployment workflow.
 
-Esta estructura reduce la carga cognitiva y evita presentar todas las funcionalidades con la misma prioridad desde el primer pantallazo.
+## Product Narrative
 
-## Segmentos objetivo
+ReadyDorm helps users prepare before risk and act quickly during emergencies:
 
-### Residentes jóvenes
+1. Prepare: emergency profile, trusted contacts, backpack checklist, and evacuation routes.
+2. Respond: SOS, safe check-ins, route guidance, and nearby medical support.
+3. Coordinate: family alerts, roommate coordination, and manager dashboards.
 
-Estudiantes y jóvenes que viven solos, con compañeros de vivienda o en residencias y necesitan prepararse, coordinar tareas y solicitar ayuda durante una emergencia.
-
-### Gestores de residencias
-
-Administradores de edificios, residencias universitarias o inmuebles compartidos que requieren monitorear residentes, emitir alertas y organizar recursos de seguridad.
-
-### Contactos de emergencia
-
-Familiares o personas de confianza que necesitan recibir alertas, conocer la ubicación y consultar información médica crítica del residente.
-
-## Características principales
-
-- Perfil de emergencia, ficha médica y contactos de confianza.
-- Selección de rol para residentes, gestores y contactos.
-- Botón SOS con activación sostenida, voz, linterna y cancelación.
-- Reporte de estado "Estoy a salvo" y alertas de proximidad.
-- Directorio de números de emergencia del Perú.
-- Rutas de evacuación por piso, salida alterna y punto seguro.
-- Coordinación de compañeros de vivienda mediante roles, tareas y chat.
-- Mochila de 72 horas con lista de verificación y alertas de caducidad.
-- Preguntas rápidas, nivel de preparación, medallas y simulacros.
-- Vista de seguimiento para familiares y contactos.
-- Panel de estado para gestores, brigadistas, equipos y reportes.
-- Mapa simulado de centros médicos cercanos.
-
-El prototipo representa las 46 historias de usuario funcionales definidas para ReadyDorm.
-
-## Criterios mejorados según feedback
-
-- Propuesta de valor más clara en el primer pantallazo.
-- Narrativa progresiva: problema, solución y acción.
-- Funcionalidades agrupadas por intención: prepararse, actuar y coordinar ayuda.
-- Lenguaje más directo para usuarios no técnicos.
-- Mayor refuerzo de confianza: uso de datos en emergencia, contactos de confianza y prácticas preventivas.
-- Llamadas a la acción más visibles: crear cuenta y ver cómo funciona.
-
-## Tecnologías
+## Technologies
 
 - HTML5
 - CSS3
 - JavaScript
 - Google Fonts
-- Git y GitHub
-- GitHub Pages
+- Git and GitHub Pages
+- Local WebM video assets generated for the academic prototype
 
-El proyecto no utiliza frameworks de CSS ni JavaScript.
+The project does not use JavaScript or CSS frameworks.
 
-## Estructura del proyecto
+## Project Structure
 
 ```text
 .
@@ -91,8 +58,15 @@ El proyecto no utiliza frameworks de CSS ni JavaScript.
 |   |   |   `-- readydorm-logo.png
 |   |   |-- scripts/
 |   |   |   `-- main.js
-|   |   `-- styles/
-|   |       `-- styles.css
+|   |   |-- styles/
+|   |   |   `-- styles.css
+|   |   `-- videos/
+|   |       |-- about-product.webm
+|   |       |-- about-product-poster.svg
+|   |       |-- about-product.vtt
+|   |       |-- about-team.webm
+|   |       |-- about-team-poster.svg
+|   |       `-- about-team.vtt
 |   |-- favicon.ico
 |   |-- index.html
 |   |-- login.html
@@ -100,34 +74,24 @@ El proyecto no utiliza frameworks de CSS ni JavaScript.
 |-- .github/
 |   `-- workflows/
 |       `-- pages.yml
+|-- tools/
+|   `-- generate-videos.mjs
 |-- .gitignore
 `-- README.md
 ```
 
-## Flujo de trabajo GitFlow
-
-- `main`: versión estable y publicada.
-- `develop`: rama de integración del equipo.
-- `feature/*`: ramas creadas desde `develop` para implementar funcionalidades o mejoras.
-
-La reorganización solicitada para el challenge fue trabajada en la rama `feature/challenge-landing-structure`, integrada primero en `develop` y posteriormente en `main`.
-
-## Ejecución local
-
-La carpeta pública del proyecto es `public`.
+## Run Locally
 
 ```bash
 python -m http.server 8000 --directory public
 ```
 
-Después, abre:
+Then open:
 
 ```text
 http://localhost:8000
 ```
 
-También puedes abrir directamente `public/index.html` en un navegador.
+## Academic Note
 
-## Alcance académico
-
-El repositorio publica únicamente el código y los recursos de la Landing Page. Los documentos académicos internos y archivos PDF no forman parte del repositorio.
+ReadyDorm is a course prototype for IHC y Tecnologias Moviles. The landing page demonstrates product communication, responsiveness, internationalization, and accessibility considerations for an emergency-readiness solution.
