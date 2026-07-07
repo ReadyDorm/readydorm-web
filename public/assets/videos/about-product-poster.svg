@@ -3,28 +3,32 @@
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#F8FBFF"/>
-      <stop offset="0.58" stop-color="#EEF5FA"/>
+      <stop offset="0.6" stop-color="#EEF5FA"/>
       <stop offset="1" stop-color="#FFFFFF"/>
     </linearGradient>
   </defs>
   <rect width="1280" height="720" fill="url(#bg)"/>
-  <circle cx="1128" cy="96" r="190" fill="#FA6A63" opacity="0.14"/>
-  <rect x="64" y="72" width="1152" height="576" rx="42" fill="#FFFFFF" stroke="#D9E2EC" stroke-width="2"/>
-  <text x="106" y="158" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="900" fill="#FA6A63">READYDORM</text>
-  <text x="106" y="232" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="900" fill="#082B49">About the Product</text>
-  <foreignObject x="106" y="260" width="530" height="120">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,Arial,sans-serif;font-size:24px;line-height:1.35;color:#607285">A realistic walkthrough of preparation, SOS, route guidance, sensors, and manager coordination.</div>
+  <circle cx="1120" cy="104" r="210" fill="#FA6A63" opacity="0.14"/>
+  <rect x="64" y="70" width="1152" height="580" rx="42" fill="#FFFFFF" stroke="#D9E2EC" stroke-width="2"/>
+  <text x="106" y="154" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="900" fill="#FA6A63">READYDORM</text>
+  <text x="106" y="226" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="900" fill="#082B49">About the Product</text>
+  <foreignObject x="108" y="248" width="520" height="52">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,Arial,sans-serif;font-size:28px;font-weight:800;line-height:1.2;color:#18324A">SafetyTech for shared housing</div>
   </foreignObject>
-  <rect x="106" y="468" width="178" height="56" rx="14" fill="#FA6A63"/>
-  <text x="148" y="504" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" fill="#FFFFFF">Watch demo</text>
+  <foreignObject x="108" y="316" width="540" height="140">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,Arial,sans-serif;font-size:23px;line-height:1.35;color:#607285">Mobile emergency profile, SOS response, evacuation route, IoT sensors, contacts, and manager coordination.</div>
+  </foreignObject>
+  <rect x="108" y="512" width="194" height="58" rx="14" fill="#FA6A63"/>
+  <text x="150" y="548" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" fill="#FFFFFF">Watch demo</text>
   
-      <rect x="770" y="142" width="350" height="470" rx="34" fill="#082B49"/>
-      <rect x="794" y="172" width="302" height="410" rx="22" fill="#FFFFFF"/>
-      <text x="830" y="228" font-size="20" font-weight="900" fill="#082B49">Emergency plan</text>
-      <rect x="830" y="260" width="230" height="70" rx="14" fill="#FFF0EF"/>
-      <text x="852" y="302" font-size="18" font-weight="900" fill="#DE514B">SOS ready</text>
-      <rect x="830" y="356" width="230" height="70" rx="14" fill="#E7F8F5"/>
-      <text x="852" y="398" font-size="18" font-weight="900" fill="#08796F">Exit B route</text>
-      <rect x="830" y="452" width="230" height="70" rx="14" fill="#EEF3F8"/>
-      <text x="852" y="494" font-size="18" font-weight="900" fill="#0E3B64">Manager synced</text>
+      <rect x="748" y="134" width="338" height="438" rx="38" fill="#082B49"/>
+      <rect x="772" y="164" width="290" height="378" rx="26" fill="#FFFFFF"/>
+      <text x="812" y="222" font-size="18" font-weight="900" fill="#607285">READYDORM</text>
+      <text x="812" y="278" font-size="42" font-weight="900" fill="#082B49">SOS Ready</text>
+      <rect x="812" y="314" width="208" height="58" rx="14" fill="#FFE7E5"/>
+      <text x="838" y="350" font-size="18" font-weight="900" fill="#DE514B">Emergency profile</text>
+      <rect x="812" y="392" width="208" height="58" rx="14" fill="#E7F8F5"/>
+      <text x="838" y="428" font-size="18" font-weight="900" fill="#08796F">Exit B route</text>
+      <rect x="812" y="470" width="208" height="58" rx="14" fill="#EEF3F8"/>
+      <text x="838" y="506" font-size="18" font-weight="900" fill="#0E3B64">Manager dashboard</text>
 </svg>
