@@ -26,6 +26,7 @@ The final landing page satisfies the requested delivery criteria:
 - "About the Product" video with controls, captions, poster, and transcript.
 - "About the Team" video with controls, captions, poster, and transcript.
 - Accessibility-oriented structure: semantic landmarks, skip links, labels, alt text, visible focus states, keyboard-friendly navigation, captions, and reduced-motion support.
+- Complete product sections for emergency protocols, resident modules, response workflow, and residence manager dashboard.
 - GitHub Pages deployment workflow.
 
 ## Product Narrative
@@ -35,6 +36,8 @@ ReadyDorm helps users prepare before risk and act quickly during emergencies:
 1. Prepare: emergency profile, trusted contacts, backpack checklist, and evacuation routes.
 2. Respond: SOS, safe check-ins, route guidance, and nearby medical support.
 3. Coordinate: family alerts, roommate coordination, and manager dashboards.
+
+The landing page also presents action guides for earthquakes, fires, gas leaks, floods, power outages, and medical events, plus the modules that were part of the original product concept.
 
 ## Technologies
 
