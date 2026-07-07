@@ -32,6 +32,7 @@
         <a href="#protocols" class="nav-link">Protocols</a>
         <a href="#modules" class="nav-link">Modules</a>
         <a href="#manager" class="nav-link">Dashboard</a>
+        <a href="product.html" class="nav-link">Full Product</a>
         <a href="#accessibility" class="nav-link">Accessibility</a>
       </div>
 
@@ -54,6 +55,7 @@
           <div class="hero-buttons">
             <a href="registro.html" class="btn btn-primary btn-large">Create a safety plan</a>
             <a href="#product" class="btn btn-soft btn-large">Watch product video</a>
+            <a href="product.html" class="btn btn-ghost btn-large">Explore full product</a>
           </div>
           <ul class="trust-row" aria-label="Key benefits">
             <li>Emergency plan in minutes</li>
@@ -109,7 +111,7 @@
             Show product video transcript
           </button>
           <div class="transcript" id="productTranscript" hidden>
-            <p><strong>Transcript:</strong> ReadyDorm helps residents prepare an emergency profile, save trusted contacts, review routes, check a 72-hour backpack, and use SOS or safe check-ins during a crisis. Managers can monitor building status and coordinate response.</p>
+            <p><strong>Transcript:</strong> ReadyDorm brings emergency preparation into one mobile-first workflow. Residents can prepare profiles, contacts, backpacks, and evacuation routes. During an emergency, SOS alerts, safe check-ins, and route guidance help residents act quickly. Managers can monitor building status, alerts, sensors, and meeting points from a dashboard.</p>
           </div>
         </div>
         <figure class="video-card reveal delay-1">
@@ -143,7 +145,7 @@
             Show team video transcript
           </button>
           <div class="transcript" id="teamTranscript" hidden>
-            <p><strong>Transcript:</strong> The ReadyDorm team researched residential emergency needs, designed user flows for preparation and response, and built a responsive landing page deployed through GitHub Pages as an academic prototype.</p>
+            <p><strong>Transcript:</strong> ReadyDorm was designed by students for safer shared housing. The team researched resident, roommate, family, and residence manager needs. The design prioritizes low cognitive load, accessible controls, and fast decisions. The final prototype includes videos, a responsive landing page, a product detail page, and GitHub Pages deployment.</p>
           </div>
         </div>
       </div>
@@ -225,6 +227,7 @@
           <span class="section-kicker">Product modules</span>
           <h2 id="modules-title">The complete ReadyDorm experience stays visible in the final landing page.</h2>
           <p>These modules represent the main screens and workflows from the project: preparation, response, coordination, training, and family communication.</p>
+          <a href="product.html" class="text-button detail-link">Open the complete product detail page</a>
         </div>
 
         <div class="module-panel reveal delay-1" aria-label="ReadyDorm module highlights">
@@ -322,11 +325,50 @@
               <small>Require attention</small>
             </div>
           </div>
-          <div class="map-preview" aria-label="Evacuation map preview">
-            <span class="route-line"></span>
-            <span class="map-pin room">Room 304</span>
-            <span class="map-pin exit">Exit B</span>
-            <span class="map-pin meet">Meeting point</span>
+          <div class="floorplan-preview" aria-label="Evacuation floor plan preview">
+            <div class="floorplan-toolbar">
+              <span>Floor 3 evacuation map</span>
+              <strong>Exit B recommended</strong>
+            </div>
+            <svg class="floorplan-svg" viewBox="0 0 760 380" role="img" aria-labelledby="floorplan-title floorplan-desc">
+              <title id="floorplan-title">ReadyDorm evacuation map preview</title>
+              <desc id="floorplan-desc">A residence floor plan showing rooms, hallway route, emergency exits, sensors, and the outdoor meeting point.</desc>
+              <rect x="22" y="28" width="716" height="258" rx="18" class="floor-shell" />
+              <rect x="58" y="64" width="140" height="82" rx="10" class="room safe-room" />
+              <text x="86" y="112" class="room-label">Room 301</text>
+              <rect x="218" y="64" width="140" height="82" rx="10" class="room current-room" />
+              <text x="246" y="98" class="room-label">Room 304</text>
+              <text x="246" y="123" class="room-sub">Resident alert</text>
+              <rect x="378" y="64" width="140" height="82" rx="10" class="room" />
+              <text x="406" y="112" class="room-label">Room 305</text>
+              <rect x="538" y="64" width="140" height="82" rx="10" class="room" />
+              <text x="566" y="112" class="room-label">Room 306</text>
+
+              <rect x="58" y="190" width="140" height="62" rx="10" class="support-room" />
+              <text x="84" y="228" class="room-label">Stairs A</text>
+              <rect x="538" y="190" width="140" height="62" rx="10" class="exit-room" />
+              <text x="574" y="228" class="exit-label">Exit B</text>
+              <rect x="218" y="190" width="300" height="62" rx="10" class="hall" />
+              <text x="314" y="242" class="hall-label">Main corridor</text>
+
+              <path d="M288 146 L288 221 L534 221" class="route-primary" />
+              <path d="M288 146 L126 221" class="route-secondary" />
+              <circle cx="288" cy="146" r="12" class="pin alert-pin" />
+              <circle cx="534" cy="221" r="12" class="pin exit-pin" />
+              <circle cx="126" cy="221" r="9" class="pin backup-pin" />
+              <circle cx="452" cy="89" r="8" class="sensor sensor-ok" />
+              <circle cx="612" cy="89" r="8" class="sensor sensor-risk" />
+
+              <rect x="492" y="316" width="178" height="44" rx="22" class="meeting-chip" />
+              <text x="528" y="344" class="meeting-label">Front park</text>
+              <path d="M632 252 C638 286 624 300 604 316" class="outside-route" />
+            </svg>
+            <div class="floorplan-legend" aria-label="Map legend">
+              <span><i class="legend-dot alert"></i>Active room</span>
+              <span><i class="legend-dot primary"></i>Primary route</span>
+              <span><i class="legend-dot backup"></i>Backup route</span>
+              <span><i class="legend-dot sensor"></i>Sensor signal</span>
+            </div>
           </div>
         </div>
 
@@ -389,6 +431,7 @@
         <a href="#protocols">Emergency Protocols</a>
         <a href="#modules">Product Modules</a>
         <a href="#manager">Manager Dashboard</a>
+        <a href="product.html">Full Product</a>
         <a href="#accessibility">Accessibility</a>
       </nav>
       <div>

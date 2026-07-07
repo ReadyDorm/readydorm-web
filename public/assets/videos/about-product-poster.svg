@@ -3,39 +3,28 @@
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#F8FBFF"/>
-      <stop offset="0.55" stop-color="#EEF5FA"/>
+      <stop offset="0.58" stop-color="#EEF5FA"/>
       <stop offset="1" stop-color="#FFFFFF"/>
     </linearGradient>
   </defs>
   <rect width="1280" height="720" fill="url(#bg)"/>
-  <circle cx="1080" cy="120" r="190" fill="#FA6A63" opacity="0.13"/>
-  <circle cx="90" cy="650" r="220" fill="#0E3B64" opacity="0.10"/>
-  <rect x="60" y="54" width="1160" height="612" rx="38" fill="#ffffff" stroke="#D9E2EC" stroke-width="2"/>
-  <text x="84" y="132" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="900" fill="#FA6A63">READYDORM</text>
-  <text x="84" y="194" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="900" fill="#082B49">About the Product</text>
-  <text x="84" y="235" font-family="Inter, Arial, sans-serif" font-size="24" fill="#526274">ReadyDorm turns emergency planning into clear action.</text>
+  <circle cx="1128" cy="96" r="190" fill="#FA6A63" opacity="0.14"/>
+  <rect x="64" y="72" width="1152" height="576" rx="42" fill="#FFFFFF" stroke="#D9E2EC" stroke-width="2"/>
+  <text x="106" y="158" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="900" fill="#FA6A63">READYDORM</text>
+  <text x="106" y="232" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="900" fill="#082B49">About the Product</text>
+  <foreignObject x="106" y="260" width="530" height="120">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,Arial,sans-serif;font-size:24px;line-height:1.35;color:#607285">A realistic walkthrough of preparation, SOS, route guidance, sensors, and manager coordination.</div>
+  </foreignObject>
+  <rect x="106" y="468" width="178" height="56" rx="14" fill="#FA6A63"/>
+  <text x="148" y="504" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" fill="#FFFFFF">Watch demo</text>
   
-    <g transform="translate(84 250)">
-      <circle cx="18" cy="18" r="18" fill="#FA6A63"/>
-      <text x="18" y="24" text-anchor="middle" font-size="18" font-weight="800" fill="#ffffff">1</text>
-      <text x="58" y="14" font-size="25" font-weight="800" fill="#082B49">Prepare</text>
-      <text x="58" y="45" font-size="18" fill="#526274">Emergency profile, contacts, backpack, and routes in one place.</text>
-    </g>
-  
-    <g transform="translate(84 326)">
-      <circle cx="18" cy="18" r="18" fill="#FA6A63"/>
-      <text x="18" y="24" text-anchor="middle" font-size="18" font-weight="800" fill="#ffffff">2</text>
-      <text x="58" y="14" font-size="25" font-weight="800" fill="#082B49">Respond</text>
-      <text x="58" y="45" font-size="18" fill="#526274">SOS, safe check-ins, evacuation guidance, and nearby clinics.</text>
-    </g>
-  
-    <g transform="translate(84 402)">
-      <circle cx="18" cy="18" r="18" fill="#FA6A63"/>
-      <text x="18" y="24" text-anchor="middle" font-size="18" font-weight="800" fill="#ffffff">3</text>
-      <text x="58" y="14" font-size="25" font-weight="800" fill="#082B49">Coordinate</text>
-      <text x="58" y="45" font-size="18" fill="#526274">Roommates, families, and residence managers stay aligned.</text>
-    </g>
-  
-  <circle cx="1042" cy="360" r="84" fill="#FA6A63"/>
-  <polygon points="1020,316 1020,404 1096,360" fill="#ffffff"/>
+      <rect x="770" y="142" width="350" height="470" rx="34" fill="#082B49"/>
+      <rect x="794" y="172" width="302" height="410" rx="22" fill="#FFFFFF"/>
+      <text x="830" y="228" font-size="20" font-weight="900" fill="#082B49">Emergency plan</text>
+      <rect x="830" y="260" width="230" height="70" rx="14" fill="#FFF0EF"/>
+      <text x="852" y="302" font-size="18" font-weight="900" fill="#DE514B">SOS ready</text>
+      <rect x="830" y="356" width="230" height="70" rx="14" fill="#E7F8F5"/>
+      <text x="852" y="398" font-size="18" font-weight="900" fill="#08796F">Exit B route</text>
+      <rect x="830" y="452" width="230" height="70" rx="14" fill="#EEF3F8"/>
+      <text x="852" y="494" font-size="18" font-weight="900" fill="#0E3B64">Manager synced</text>
 </svg>

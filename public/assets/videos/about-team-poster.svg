@@ -3,39 +3,26 @@
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#F8FBFF"/>
-      <stop offset="0.55" stop-color="#EEF5FA"/>
+      <stop offset="0.58" stop-color="#EEF5FA"/>
       <stop offset="1" stop-color="#FFFFFF"/>
     </linearGradient>
   </defs>
   <rect width="1280" height="720" fill="url(#bg)"/>
-  <circle cx="1080" cy="120" r="190" fill="#2EC5B6" opacity="0.13"/>
-  <circle cx="90" cy="650" r="220" fill="#0E3B64" opacity="0.10"/>
-  <rect x="60" y="54" width="1160" height="612" rx="38" fill="#ffffff" stroke="#D9E2EC" stroke-width="2"/>
-  <text x="84" y="132" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="900" fill="#2EC5B6">READYDORM</text>
-  <text x="84" y="194" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="900" fill="#082B49">About the Team</text>
-  <text x="84" y="235" font-family="Inter, Arial, sans-serif" font-size="24" fill="#526274">Built by students for safer shared living.</text>
+  <circle cx="1128" cy="96" r="190" fill="#2EC5B6" opacity="0.14"/>
+  <rect x="64" y="72" width="1152" height="576" rx="42" fill="#FFFFFF" stroke="#D9E2EC" stroke-width="2"/>
+  <text x="106" y="158" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="900" fill="#2EC5B6">READYDORM</text>
+  <text x="106" y="232" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="900" fill="#082B49">About the Team</text>
+  <foreignObject x="106" y="260" width="530" height="120">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,Arial,sans-serif;font-size:24px;line-height:1.35;color:#607285">How the team researched, designed, tested, and deployed ReadyDorm as an inclusive prototype.</div>
+  </foreignObject>
+  <rect x="106" y="468" width="178" height="56" rx="14" fill="#2EC5B6"/>
+  <text x="148" y="504" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" fill="#FFFFFF">Watch demo</text>
   
-    <g transform="translate(84 250)">
-      <circle cx="18" cy="18" r="18" fill="#2EC5B6"/>
-      <text x="18" y="24" text-anchor="middle" font-size="18" font-weight="800" fill="#ffffff">1</text>
-      <text x="58" y="14" font-size="25" font-weight="800" fill="#082B49">Research</text>
-      <text x="58" y="45" font-size="18" fill="#526274">We focused on students, roommates, families, and residence managers.</text>
-    </g>
-  
-    <g transform="translate(84 326)">
-      <circle cx="18" cy="18" r="18" fill="#2EC5B6"/>
-      <text x="18" y="24" text-anchor="middle" font-size="18" font-weight="800" fill="#ffffff">2</text>
-      <text x="58" y="14" font-size="25" font-weight="800" fill="#082B49">Design</text>
-      <text x="58" y="45" font-size="18" fill="#526274">We prioritized accessibility, fast decisions, and low cognitive load.</text>
-    </g>
-  
-    <g transform="translate(84 402)">
-      <circle cx="18" cy="18" r="18" fill="#2EC5B6"/>
-      <text x="18" y="24" text-anchor="middle" font-size="18" font-weight="800" fill="#ffffff">3</text>
-      <text x="58" y="14" font-size="25" font-weight="800" fill="#082B49">Build</text>
-      <text x="58" y="45" font-size="18" fill="#526274">We delivered a responsive landing page deployed with GitHub Pages.</text>
-    </g>
-  
-  <circle cx="1042" cy="360" r="84" fill="#2EC5B6"/>
-  <polygon points="1020,316 1020,404 1096,360" fill="#ffffff"/>
+      <rect x="720" y="154" width="430" height="350" rx="28" fill="#FFFFFF" stroke="#D9E2EC" stroke-width="2"/>
+      <rect x="758" y="200" width="110" height="110" rx="24" fill="#DDF7F3"/>
+      <rect x="900" y="200" width="110" height="110" rx="24" fill="#EEF3F8"/>
+      <rect x="1042" y="200" width="70" height="110" rx="24" fill="#FFE7E5"/>
+      <text x="758" y="370" font-size="20" font-weight="900" fill="#082B49">Research</text>
+      <text x="900" y="370" font-size="20" font-weight="900" fill="#082B49">Design</text>
+      <text x="1042" y="370" font-size="20" font-weight="900" fill="#082B49">Build</text>
 </svg>

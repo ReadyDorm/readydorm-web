@@ -1,10 +1,13 @@
 WEBVTT
 
 00:00.000 --> 00:02.000
-ReadyDorm was built by students for safer shared living.
+ReadyDorm was designed by students for safer shared housing.
 
-00:02.000 --> 00:04.000
-The team researched resident, family, and manager needs.
+00:02.000 --> 00:04.500
+The team researched resident, roommate, family, and residence manager needs.
 
-00:04.000 --> 00:06.000
-The final prototype is responsive, accessible, and deployed with GitHub Pages.
+00:04.500 --> 00:06.500
+The design prioritizes low cognitive load, accessible controls, and fast decisions.
+
+00:06.500 --> 00:08.000
+The final prototype includes videos, a responsive landing page, a product detail page, and GitHub Pages deployment.

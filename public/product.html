@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReadyDorm | Full product experience</title>
+  <meta name="description" content="Explore ReadyDorm's complete emergency-readiness modules, dashboards, protocols, and user flows." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="assets/styles/styles.css" />
+  <script defer src="assets/scripts/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html#home" aria-label="ReadyDorm home">
+        <img src="assets/images/readydorm-icon.png" alt="" class="brand-icon" />
+        <span class="brand-name">ReadyDorm</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="index.html#home" class="nav-link">Landing</a>
+        <a href="#resident" class="nav-link">Resident</a>
+        <a href="#manager-detail" class="nav-link">Manager</a>
+        <a href="#iot" class="nav-link">IoT</a>
+        <a href="#delivery" class="nav-link">Delivery</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost btn-sm">Log in</a>
+        <a href="registro.html" class="btn btn-primary btn-sm">Create account</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="product-hero">
+      <div class="container product-hero-grid">
+        <div class="reveal">
+          <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> Complete product detail</p>
+          <h1>All ReadyDorm modules in one organized product page.</h1>
+          <p class="hero-description">This page keeps the landing page clean while still showing the full project scope: resident preparation, emergency response, manager operations, IoT alerts, accessibility, and delivery evidence.</p>
+          <div class="hero-buttons">
+            <a href="#resident" class="btn btn-primary btn-large">View resident flow</a>
+            <a href="index.html#product" class="btn btn-soft btn-large">Back to videos</a>
+          </div>
+        </div>
+        <div class="phone-showcase reveal delay-1" aria-label="ReadyDorm mobile screens preview">
+          <article class="phone-frame active">
+            <div class="phone-status">ReadyDorm</div>
+            <h2>SOS</h2>
+            <p>Hold for 3 seconds to send your location and emergency profile.</p>
+            <button type="button">Hold to send SOS</button>
+          </article>
+          <article class="phone-frame">
+            <div class="phone-status">Route</div>
+            <h2>Exit B</h2>
+            <p>Main corridor clear. Meeting point: front park.</p>
+            <div class="mini-route"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section detail-section" id="resident" aria-labelledby="resident-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Resident experience</span>
+          <h2 id="resident-title">Preparation and response screens for students and roommates.</h2>
+          <p>Residents can prepare their data before an emergency and act quickly when something happens.</p>
+        </div>
+        <div class="detail-grid">
+          <article class="detail-card reveal">
+            <span>01</span>
+            <h3>Emergency profile</h3>
+            <p>Blood type, allergies, medication, accessibility needs, room number, preferred language, and instructions for responders.</p>
+          </article>
+          <article class="detail-card reveal delay-1">
+            <span>02</span>
+            <h3>Trusted contacts</h3>
+            <p>Family, roommates, and emergency contacts receive safety status and location when the resident allows it.</p>
+          </article>
+          <article class="detail-card reveal delay-2">
+            <span>03</span>
+            <h3>72-hour backpack</h3>
+            <p>Checklist for water, food, documents, medication, flashlight, charger, hygiene items, whistle, and cash.</p>
+          </article>
+          <article class="detail-card reveal">
+            <span>04</span>
+            <h3>Evacuation routes</h3>
+            <p>Primary and alternate exits, floor maps, meeting points, and route notes that stay readable on mobile.</p>
+          </article>
+          <article class="detail-card reveal delay-1">
+            <span>05</span>
+            <h3>SOS and check-ins</h3>
+            <p>Hold-to-send SOS, safe check-in, false alarm cancellation, flashlight support, and clear next steps.</p>
+          </article>
+          <article class="detail-card reveal delay-2">
+            <span>06</span>
+            <h3>Training and badges</h3>
+            <p>Short lessons, drill participation, preparedness score, and badges that motivate repeated safety practice.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section product-map-section" id="manager-detail" aria-labelledby="manager-detail-title">
+      <div class="container manager-layout">
+        <div class="section-copy reveal">
+          <span class="section-kicker">Residence operations</span>
+          <h2 id="manager-detail-title">A complete dashboard for building-level coordination.</h2>
+          <p>Managers can monitor resident status, send targeted alerts, check emergency equipment, coordinate brigadiers, and review drill reports.</p>
+          <ul class="manager-list">
+            <li>Resident board grouped by safe, pending, and help requested.</li>
+            <li>Mass alerts by floor, sector, or full residence.</li>
+            <li>Equipment inventory for extinguishers, first-aid kits, hoses, and alarms.</li>
+            <li>Exportable drill and incident reports for continuous improvement.</li>
+          </ul>
+        </div>
+        <div class="ops-dashboard reveal delay-1">
+          <div class="ops-header">
+            <strong>Manager command center</strong>
+            <span>Emergency drill</span>
+          </div>
+          <div class="ops-grid">
+            <article><strong>52</strong><span>Residents</span></article>
+            <article><strong>42</strong><span>Safe</span></article>
+            <article><strong>8</strong><span>Pending</span></article>
+            <article><strong>2</strong><span>Need help</span></article>
+          </div>
+          <div class="ops-timeline">
+            <p><strong>12:04</strong> Fire drill alert sent to Floor 3.</p>
+            <p><strong>12:06</strong> Exit B recommended by route status.</p>
+            <p><strong>12:08</strong> Brigadier assigned to Room 304.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section detail-section" id="iot" aria-labelledby="iot-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Additional IoT feature</span>
+          <h2 id="iot-title">Smart sensor alerts make emergencies visible earlier.</h2>
+          <p>The IoT feature connects dorm sensors to ReadyDorm so residents and managers can detect risk before it becomes harder to control.</p>
+        </div>
+        <div class="sensor-grid">
+          <article class="sensor-card reveal">
+            <div class="sensor-icon smoke"></div>
+            <h3>Smoke sensor</h3>
+            <p>Detects smoke and triggers a fire protocol alert with nearest exit guidance.</p>
+          </article>
+          <article class="sensor-card reveal delay-1">
+            <div class="sensor-icon gas"></div>
+            <h3>Gas sensor</h3>
+            <p>Warns residents not to use switches and tells managers which sector needs evacuation.</p>
+          </article>
+          <article class="sensor-card reveal delay-2">
+            <div class="sensor-icon motion"></div>
+            <h3>Occupancy signal</h3>
+            <p>Helps managers identify rooms that may still need check-in during evacuation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section delivery-section" id="delivery" aria-labelledby="delivery-title">
+      <div class="container delivery-grid">
+        <div class="section-copy reveal">
+          <span class="section-kicker">Delivery checklist</span>
+          <h2 id="delivery-title">Built to match the final landing page requirements.</h2>
+          <p>The final project keeps the page in English, includes the two required videos, supports responsive layouts, and documents accessibility/internationalization choices.</p>
+        </div>
+        <ul class="check-list reveal delay-1">
+          <li>Landing page deployed through GitHub Pages.</li>
+          <li>About the Product and About the Team videos with captions.</li>
+          <li>English interface and semantic HTML structure.</li>
+          <li>Responsive navigation, cards, dashboards, and media.</li>
+          <li>Full product page for extra modules without overloading the landing page.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="index.html#home" aria-label="ReadyDorm home">
+          <img src="assets/images/readydorm-icon.png" alt="" class="brand-icon" />
+          <span class="brand-name">ReadyDorm</span>
+        </a>
+        <p>Academic prototype for emergency readiness in shared housing.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <h2>Explore</h2>
+        <a href="index.html#product">About the Product</a>
+        <a href="index.html#team">About the Team</a>
+        <a href="#resident">Resident Experience</a>
+        <a href="#iot">IoT Feature</a>
+      </nav>
+      <div>
+        <h2>Contact</h2>
+        <p>contact@readydorm.pe</p>
+        <p>Lima, Peru</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>2026 ReadyDorm. Academic prototype.</span>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>
